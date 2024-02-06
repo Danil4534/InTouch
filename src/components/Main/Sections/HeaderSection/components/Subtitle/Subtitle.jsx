@@ -3,7 +3,7 @@ import style from "./subtitle-style.module.scss";
 function Subtitle() {
   return (
     <div>
-      <ul>
+      <ul className={style.ul}>
         <li>Popov Yaroslav</li>
         <li>Khudolii Alina</li>
         <li>Evseev Andrey</li>
