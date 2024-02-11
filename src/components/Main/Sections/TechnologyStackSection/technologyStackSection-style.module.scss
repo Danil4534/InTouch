@@ -1,1 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+
+.header {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infinitySlider {
+  white-space: nowrap;
+  overflow: hidden;
+  gap: 40px;
+  margin: 10px 10px;
+}
+.slide {
+  width: 100%;
+  display: inline-block;
+  gap: 60px;
+  animation: 13s slide infinite linear;
+  p {
+    margin: 0 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200px;
+    height: 80px;
+    border-radius: 19px;
+    background-color: #d9d9d9;
+    box-shadow: 0px 4px 4px #4caf50;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.slider {
+  display: flex;
+}
