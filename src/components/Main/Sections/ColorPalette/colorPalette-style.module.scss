@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+
+.main {
+  width: 690px;
+  height: 660px;
+  background-color: white;
+  border-radius: 34px;
+  padding: 42px 26px;
+  h1 {
+    font-size: 26px;
+    color: black;
+    font-family: "ABeeZee", sans-serif;
+    padding-bottom: 23px;
+    text-transform: uppercase;
+    font-weight: 200;
+  }
+  .bodyLine {
+    width: 100%;
+    height: 4px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+  }
+  .bodyColorPaletteCircles {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    padding-top: 10px;
+  }
+  .bodyColorPaletteCircles > div {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    position: relative;
+  }
+  .bodyColorPaletteCircles > div > p {
+    color: white;
+    position: absolute;
+    bottom: 2px;
+    left: 10px;
+  }
+  .bodyColorPaletteCircles > div:nth-child(1) {
+    background-color: #48a651;
+  }
+  .bodyColorPaletteCircles > div:nth-child(2) {
+    background-color: #57c58a;
+  }
+  .bodyColorPaletteCircles > div:nth-child(3) {
+    background-color: #98c900;
+  }
+  .bodyColorPaletteCircles > div:nth-child(4) {
+    background-color: #adf0b4;
+    p {
+      color: black;
+    }
+  }
+  .bodyColorPaletteCircles > div:nth-child(5) {
+    background-color: #ffa500;
+  }
+  .bodyColorPaletteCircles > div:nth-child(6) {
+    background-color: #98c900;
+  }
+  .bodyColorPaletteCircles > div:nth-child(7) {
+    background-color: #98c900;
+  }
+  .bodyColorPaletteCircles > div:nth-child(8) {
+    background-color: #98c900;
+  }
+}

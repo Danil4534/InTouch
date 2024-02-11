@@ -12,6 +12,7 @@ function HeaderSection() {
         style={{
           display: "flex",
           justifyContent: "space-between",
+          paddingLeft: 117,
         }}
       >
         <div>
