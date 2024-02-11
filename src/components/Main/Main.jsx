@@ -7,11 +7,14 @@ import ColorPalette from "./Sections/ColorPalette/ColorPalette";
 import News from "./Sections/News/News";
 import BackCircle from "./Sections/HeaderSection/components/circles/BackCircle";
 import TechnologyStackSection from "./Sections/TechnologyStackSection/TechnologyStackSection";
+import Footer from "../Footer/Footer";
+import RoadMapSection from "./Sections/RoadMapSection/RoadMapSection";
 function Main() {
   return (
     <div className={style.main}>
       <HeaderSection />
       <TechnologyStackSection />
+      <RoadMapSection />
       <div className={style.mainAboutUsColorPalette}>
         <AboutUs />
         <ColorPalette />
@@ -20,6 +23,7 @@ function Main() {
       <div className={style.mainBackgound}>
         <BackCircle />
       </div>
+      <Footer />
     </div>
   );
 }

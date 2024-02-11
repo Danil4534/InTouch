@@ -21,6 +21,7 @@
   background: linear-gradient(135deg, rgba(102, 235, 115, 1) 10%, #f5f5f5 70%);
   border-radius: 50%;
   box-shadow: -5px 2px #48a651;
+  animation: 1s anim linear;
 }
 .SecondCircle {
   width: 740px;
@@ -34,6 +35,16 @@
   background: linear-gradient(135deg, rgba(63, 176, 136, 1) 1%, #f5f5f5 70%);
   box-shadow: -5px 3px #48a651;
   border-radius: 50%;
+  animation: 1s anim linear;
+}
+
+@keyframes anim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .SecondCircleBack > div:nth-child(1) {
   width: 740px;
@@ -74,4 +85,5 @@
   background: linear-gradient(135deg, rgba(74, 248, 185, 1) 1%, #f5f5f5 70%);
   border-radius: 50%;
   box-shadow: -5px 3px #48a651;
+  animation: 1s anim linear;
 }

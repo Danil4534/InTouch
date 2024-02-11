@@ -1,17 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
 
 .header {
-  margin: 20px 0;
+  margin: 50px 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "ABeeZee", sans-serif;
 }
 .infinitySlider {
   white-space: nowrap;
   overflow: hidden;
   gap: 40px;
-  margin: 10px 10px;
+
+  position: relative;
+}
+.infinitySlider::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  content: " ";
+  background: linear-gradient(270deg, transparent 0%, #f5f5f5 65%);
+  z-index: 2;
+}
+.infinitySlider::after {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  width: 50px;
+  height: 110%;
+  content: " ";
+  background: linear-gradient(90deg, transparent 0%, #f5f5f5 65%);
+  z-index: 2;
 }
 .slide {
   width: 100%;
@@ -19,7 +41,7 @@
   gap: 60px;
   animation: 13s slide infinite linear;
   p {
-    margin: 0 50px;
+    margin: 0 40px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -28,6 +50,11 @@
     border-radius: 19px;
     background-color: #d9d9d9;
     box-shadow: 0px 4px 4px #4caf50;
+    span {
+      font-size: 24px;
+      font-family: "ABeeZee", sans-serif;
+      color: grey;
+    }
   }
 }
 
