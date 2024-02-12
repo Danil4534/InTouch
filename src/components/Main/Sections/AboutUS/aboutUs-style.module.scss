@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
 
 .main {
-  width: 570px;
-  height: 660px;
+  width: 60%;
+  min-height: 600px !important;
+
   background-color: white;
   border-radius: 34px;
   padding: 42px 26px;
@@ -27,13 +28,19 @@
       border-radius: 10px;
     }
     .bodyContent {
-      padding-top: 40px;
-      p {
+      padding: 20px 100px;
+      box-sizing: border-box;
+      ul {
+      }
+      li {
+        list-style-type: decimal;
         font-size: 26px;
+        padding: 15px;
       }
     }
   }
 }
+
 // @keyframes anim {
 //   0% {
 //     transform: scale(0);

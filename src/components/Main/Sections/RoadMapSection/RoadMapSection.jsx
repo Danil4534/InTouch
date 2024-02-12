@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./roadMapSection-style.module.scss";
 import Idea from "./../../../../assets/svg/Idea.svg";
 import Classroom from "./../../../../assets/svg/Classroom.svg";
@@ -6,8 +6,19 @@ import Management from "../../../../assets/svg/Management.svg";
 import GoogleCalendar from "../../../../assets/svg/Google Calendar.svg";
 import Tasks from "../../../../assets/svg/Tasks.svg";
 import Chats from "../../../../assets/svg/Chat.svg";
-import Line from "../../../../assets/svg/Vector 1.svg";
+// import Line from "../../../../assets/svg/Vector 1.svg";
 function RoadMapSection() {
+  const [scrollPoint, setScrollPoint] = useState(0);
+  console.log(scrollPoint);
+
+  const handleScroll = () => {
+    const position = window.scrollY;
+    setScrollPoint(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
   return (
     <>
       <div className={style.main}>
@@ -16,55 +27,93 @@ function RoadMapSection() {
         </div>
         <div className={style.body}>
           <div className={style.backgroundLine}>
-            <img src={Line} alt="" />
+            <div className={`${style.circle} ${style.start}`}>
+              <p>start</p>
+            </div>
+            <div
+              className={
+                scrollPoint >= 355
+                  ? `${style.item} ${style.itemIdea} ${style.itemIdeaActive}`
+                  : `${style.item} ${style.itemIdea}`
+              }
+            >
+              <div className={`${style.circle} ${style.itemBackground}`}>
+                <img src={Idea} alt="" />
+              </div>
+              <p>Idea</p>
+            </div>
 
-            <div>
-              <div className={`${style.circle} ${style.start}`}>
-                <p>start</p>
+            <div
+              className={
+                scrollPoint >= 355
+                  ? `${style.item} ${style.itemClassroom} ${style.itemClassroomActive}`
+                  : `${style.item} ${style.itemClassroom}`
+              }
+            >
+              <div className={`${style.circle} ${style.itemBackground}`}>
+                <img src={Classroom} alt="" />
               </div>
-              <div className={`${style.item} ${style.itemIdea}`}>
-                <div className={`${style.circle} ${style.itemBackground}`}>
-                  <img src={Idea} alt="" />
-                </div>
-                <p>Idea</p>
-              </div>
+              <p>course</p>
+            </div>
 
-              <div className={`${style.item} ${style.itemClassroom}`}>
-                <div className={`${style.circle} ${style.itemBackground}`}>
-                  <img src={Classroom} alt="" />
-                </div>
-                <p>course</p>
+            <div
+              className={
+                scrollPoint >= 355
+                  ? `${style.item} ${style.itemCourse} ${style.itemCourseActive}`
+                  : `${style.item} ${style.itemCourse}`
+              }
+            >
+              <div className={`${style.circle} ${style.itemBackground}`}>
+                <img src={Tasks} alt="" />
               </div>
+              <p>tasks</p>
+            </div>
 
-              <div className={`${style.item} ${style.itemCourse}`}>
-                <div className={`${style.circle} ${style.itemBackground}`}>
-                  <img src={Tasks} alt="" />
-                </div>
-                <p>tasks</p>
+            <div
+              className={
+                scrollPoint >= 355
+                  ? `${style.item} ${style.itemMembers} ${style.itemMembersActive}`
+                  : `${style.item} ${style.itemMembers}`
+              }
+            >
+              <div className={`${style.circle} ${style.itemBackground}`}>
+                <img src={Management} alt="" />
               </div>
+              <p>members</p>
+            </div>
+            <div
+              className={
+                scrollPoint >= 355
+                  ? `${style.item} ${style.itemChats} ${style.itemChatsActive}`
+                  : `${style.item} ${style.itemChats}`
+              }
+            >
+              <div className={`${style.circle} ${style.itemBackground}`}>
+                <img src={Chats} alt="" />
+              </div>
+              <p>chat</p>
+            </div>
+            <div
+              className={
+                scrollPoint >= 355
+                  ? `${style.item} ${style.itemCalendar} ${style.itemCalendarActive}`
+                  : `${style.item} ${style.itemCalendar}`
+              }
+            >
+              <div className={`${style.circle} ${style.itemBackground}`}>
+                <img src={GoogleCalendar} alt="" />
+              </div>
+              <p>calendar</p>
+            </div>
 
-              <div className={`${style.item} ${style.itemMembers}`}>
-                <div className={`${style.circle} ${style.itemBackground}`}>
-                  <img src={Management} alt="" />
-                </div>
-                <p>members</p>
-              </div>
-              <div className={`${style.item} ${style.itemChats}`}>
-                <div className={`${style.circle} ${style.itemBackground}`}>
-                  <img src={Chats} alt="" />
-                </div>
-                <p>chat</p>
-              </div>
-              <div className={`${style.item} ${style.itemCalendar}`}>
-                <div className={`${style.circle} ${style.itemBackground}`}>
-                  <img src={GoogleCalendar} alt="" />
-                </div>
-                <p>calendar</p>
-              </div>
-
-              <div className={`${style.circle} ${style.finish}`}>
-                <p>Finish</p>
-              </div>
+            <div
+              className={
+                scrollPoint >= 355
+                  ? `${style.circle} ${style.finish} ${style.finishActive}`
+                  : `${style.circle} ${style.finish}`
+              }
+            >
+              <p>Finish</p>
             </div>
           </div>
         </div>
