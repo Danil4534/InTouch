@@ -6,19 +6,17 @@ import Management from "../../../../assets/svg/Management.svg";
 import GoogleCalendar from "../../../../assets/svg/Google Calendar.svg";
 import Tasks from "../../../../assets/svg/Tasks.svg";
 import Chats from "../../../../assets/svg/Chat.svg";
-// import Line from "../../../../assets/svg/Vector 1.svg";
+
 function RoadMapSection() {
   const [scrollPoint, setScrollPoint] = useState(0);
-  console.log(scrollPoint);
 
   const handleScroll = () => {
     const position = window.scrollY;
     setScrollPoint(position);
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  });
+  window.addEventListener("scroll", handleScroll);
+
   return (
     <>
       <div className={style.main}>

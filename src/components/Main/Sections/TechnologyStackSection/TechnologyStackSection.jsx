@@ -36,6 +36,14 @@ function TechnologyStackSection() {
                 <img src={Docker} alt="" />
                 <span>Docker</span>
               </p>
+              {/* <p>
+                <img src={ReactLogo} alt="" />
+                <span>ReactJS</span>
+              </p>
+              <p>
+                <img src={ReactLogo} alt="" />
+                <span>ReactJS</span>
+              </p> */}
             </div>
           </div>
           <div className={style.slide}>
@@ -61,6 +69,14 @@ function TechnologyStackSection() {
                 <img src={Docker} alt="" />
                 <span>Docker</span>
               </p>
+              {/* <p>
+                <img src={ReactLogo} alt="" />
+                <span>ReactJS</span>
+              </p>
+              <p>
+                <img src={ReactLogo} alt="" />
+                <span>ReactJS</span>
+              </p> */}
             </div>
           </div>
         </div>

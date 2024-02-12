@@ -9,3 +9,11 @@
     padding: 70px 69px 0px 92px;
   }
 }
+@media (min-width: 1424px) {
+  .mainAboutUsColorPalette {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0px 0px 0px 0px;
+  }
+}

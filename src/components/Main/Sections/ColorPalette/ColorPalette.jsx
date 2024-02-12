@@ -23,6 +23,27 @@ function ColorPalette() {
             <div>
               <p>#FFA500</p>
             </div>
+            <div>
+              <p>#FFA500</p>
+            </div>
+            <div>
+              <p>#FFA500</p>
+            </div>
+            <div>
+              <p>#FFA500</p>
+            </div>
+            <div>
+              <p>#FFA500</p>
+            </div>
+            <div>
+              <p>#808080</p>
+            </div>
+            <div>
+              <p>#f5f5f5</p>
+            </div>
+            <div>
+              <p>#FFFFFF</p>
+            </div>
           </div>
         </div>
       </div>
