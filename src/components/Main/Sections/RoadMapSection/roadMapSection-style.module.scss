@@ -117,7 +117,7 @@
   left: -300px;
 }
 .itemMembersActive {
-  animation: members 2s linear forwards;
+  animation: members 1s linear forwards;
 }
 .itemChats {
   position: absolute;
@@ -125,7 +125,7 @@
   left: -150px;
 }
 .itemChatsActive {
-  animation: chat 2s linear forwards;
+  animation: chat 1s linear forwards;
 }
 .itemCalendar {
   position: absolute;
@@ -133,7 +133,7 @@
   left: 20px;
 }
 .itemCalendarActive {
-  animation: calendar 2s linear forwards;
+  animation: calendar 1s linear forwards;
 }
 @media (min-width: 1440px) {
   .body {
@@ -223,36 +223,36 @@
   }
   10% {
     top: -140px;
-    left: 500px;
+    left: 400px;
   }
   20% {
     top: -100px;
-    left: 500px;
+    left: 400px;
   }
   30% {
     top: -60px;
-    left: 500px;
+    left: 400px;
   }
   40% {
     top: -40px;
-    left: 500px;
+    left: 400px;
   }
   50% {
     top: -40px;
-    left: 200px;
+    left: 100px;
   }
   60% {
     top: -40px;
-    left: -650px;
+    left: -750px;
   }
   70% {
     top: 60px;
-    left: -650px;
+    left: -750px;
   }
 
   80% {
     top: 100px;
-    left: -650px;
+    left: -750px;
   }
   90% {
     top: 130px;
@@ -262,52 +262,7 @@
     left: -150px;
   }
 }
-@keyframes finish {
-  0% {
-    top: -140px;
-    left: 200px;
-  }
-  10% {
-    top: -140px;
-    left: 500px;
-  }
-  20% {
-    top: -100px;
-    left: 500px;
-  }
-  30% {
-    top: -60px;
-    left: 500px;
-  }
-  40% {
-    top: -40px;
-    left: 500px;
-  }
-  50% {
-    top: -40px;
-    left: 200px;
-  }
-  60% {
-    top: -40px;
-    left: -650px;
-  }
-  70% {
-    top: 60px;
-    left: -650px;
-  }
 
-  80% {
-    top: 100px;
-    left: -650px;
-  }
-  90% {
-    top: 130px;
-  }
-  100% {
-    top: 130px;
-    left: -150px;
-  }
-}
 @keyframes calendar {
   0% {
     top: -140px;
@@ -315,36 +270,36 @@
   }
   10% {
     top: -140px;
-    left: 500px;
+    left: 300px;
   }
   20% {
     top: -100px;
-    left: 500px;
+    left: 300px;
   }
   30% {
     top: -60px;
-    left: 500px;
+    left: 300px;
   }
   40% {
     top: -40px;
-    left: 500px;
+    left: 300px;
   }
   50% {
     top: -40px;
-    left: 200px;
+    left: 100px;
   }
   60% {
     top: -40px;
-    left: -650px;
+    left: -850px;
   }
   70% {
     top: 60px;
-    left: -650px;
+    left: -850px;
   }
 
   80% {
     top: 100px;
-    left: -650px;
+    left: -850px;
   }
   90% {
     top: 130px;
