@@ -9,7 +9,6 @@ import Chats from "../../../../assets/svg/Chat.svg";
 
 function RoadMapSection() {
   const [isAnimated, setIsAnimated] = useState(false);
-
   const handleScroll = () => {
     const position = window.scrollY;
     if (position >= 370) {

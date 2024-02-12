@@ -13,6 +13,8 @@
   margin-top: 90px;
   margin-bottom: 76px;
   transition: 0.3s ease-in-out;
+  user-select: none;
+  outline: none;
   &:hover {
     cursor: pointer;
     color: green;

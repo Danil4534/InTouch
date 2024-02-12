@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   h1 {
+    user-select: none;
     text-transform: uppercase;
   }
 }
@@ -35,6 +36,7 @@
       font-size: 26px;
       color: white;
       text-transform: uppercase;
+      user-select: none;
     }
   }
 
@@ -49,6 +51,7 @@
       font-size: 26px;
       color: white;
       text-transform: uppercase;
+      user-select: none;
     }
   }
   .finishActive {
@@ -67,12 +70,14 @@
       img {
         width: 55px;
         height: 55px;
+        user-select: none;
       }
     }
     p {
       position: absolute;
       bottom: -20px;
       text-transform: uppercase;
+      user-select: none;
     }
   }
 }
