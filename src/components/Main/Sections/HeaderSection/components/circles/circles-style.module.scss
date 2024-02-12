@@ -60,21 +60,22 @@
   background: linear-gradient(135deg, rgba(63, 176, 136, 1) 1%, #f5f5f5 70%);
   box-shadow: -5px 3px #48a651;
   border-radius: 50%;
+  overflow: hidden;
 }
-.SecondCircleBack > div:nth-child(2) {
-  width: 740px;
-  height: 730px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 1800px;
-  z-index: -2;
-  right: -40%;
-  background: linear-gradient(135deg, rgba(63, 176, 136, 1) 1%, #f5f5f5 70%);
-  box-shadow: -5px 3px #48a651;
-  border-radius: 50%;
-}
+// .SecondCircleBack > div:nth-child(2) {
+//   width: 740px;
+//   height: 730px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   position: absolute;
+//   top: 1800px;
+//   z-index: -2;
+//   right: -40%;
+//   background: linear-gradient(135deg, rgba(63, 176, 136, 1) 1%, #f5f5f5 70%);
+//   box-shadow: -5px 3px #48a651;
+//   border-radius: 50%;
+// }
 
 .ThirdCircle {
   width: 550px;

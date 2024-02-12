@@ -3,7 +3,7 @@ import style from "./btnLogin-style.module.scss";
 function BtnLogin() {
   return (
     <div>
-      <button className={style.btn}>Log in</button>
+      <button className={style.btn}>Login</button>
     </div>
   );
 }

@@ -3,6 +3,13 @@ import FooterBack from "../../assets/svg/FooterBack.svg";
 import YodaIcon from "../../assets/svg/Baby Yoda.svg";
 import style from "./footer-style.module.scss";
 import MacbookFooter from "../../assets/svg/MacBook Pro 16 Footer.svg";
+import DanilPhoto from "../../assets/img/DanilPhoto.svg";
+import YarikPhoto from "../../assets/img/YarikPhoto.svg";
+import AlinaPhoto from "../../assets/img/AlinaPhoto.svg";
+import AndreyPhoto from "../../assets/img/AndreyPhoto.svg";
+import telegram from "../../assets/svg/Telegram.svg";
+import GitHub from "../../assets/svg/GitHub.svg";
+import Mail from "../../assets/svg/Gmail Logo.svg";
 function Footer() {
   return (
     <>
@@ -11,12 +18,82 @@ function Footer() {
         <h1>nTouch</h1>
       </div>
       <div className={style.footerBackground}>
-        <img src={FooterBack} alt="" />
-        <div className={style.footerImg}>
-          <img src={MacbookFooter} alt="" />
-        </div>
+        <img src={MacbookFooter} alt="" />
+      </div>
+      <div className={style.footerTextContentWrapper}>
         <div className={style.footerTextContent}>
-          <p>Hello</p>
+          <div className={style.Logo}>
+            <img src={YodaIcon} alt="" />
+            <h1>nTouch</h1>
+          </div>
+          <div className={style.footerInfoProgramer}>
+            <div className={style.footerFio}>
+              <img src={YarikPhoto} alt="" />
+              <p>Popov Yaroslav</p>
+            </div>
+            <div className={style.socialLinks}>
+              <div className={style.item}>
+                <img src={Mail} alt="" />
+              </div>
+              <div className={style.item}>
+                <img src={GitHub} alt="" />
+              </div>
+              <div className={style.item}>
+                <img src={telegram} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className={style.footerInfoProgramer}>
+            <div className={style.footerFio}>
+              <img src={AlinaPhoto} alt="" />
+              <p>Khudolii Alina</p>
+            </div>
+            <div className={style.socialLinks}>
+              <div className={style.item}>
+                <img src={Mail} alt="" />
+              </div>
+              <div className={style.item}>
+                <img src={GitHub} alt="" />
+              </div>
+              <div className={style.item}>
+                <img src={telegram} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className={style.footerInfoProgramer}>
+            <div className={style.footerFio}>
+              <img src={AndreyPhoto} alt="" />
+              <p>Evseev Andrey</p>
+            </div>
+            <div className={style.socialLinks}>
+              <div className={style.item}>
+                <img src={Mail} alt="" />
+              </div>
+              <div className={style.item}>
+                <img src={GitHub} alt="" />
+              </div>
+              <div className={style.item}>
+                <img src={telegram} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className={style.footerInfoProgramer}>
+            <div className={style.footerFio}>
+              <img src={DanilPhoto} alt="" />
+              <p>Tsapok Danil</p>
+            </div>
+            <div className={style.socialLinks}>
+              <div className={style.item}>
+                <img src={Mail} alt="" />
+              </div>
+              <div className={style.item}>
+                <img src={GitHub} alt="" />
+              </div>
+              <div className={style.item}>
+                <img src={telegram} alt="" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

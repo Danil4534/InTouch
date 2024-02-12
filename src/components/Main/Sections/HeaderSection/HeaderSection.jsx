@@ -4,17 +4,11 @@ import Logo from "./components/logo/Logo";
 import Circles from "./components/circles/Circles";
 import Subtitle from "./components/Subtitle/Subtitle";
 import BtnLogin from "./components/btnLogIn/BtnLogin";
-
+import style from "./headerSection-style.module.scss";
 function HeaderSection() {
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          paddingLeft: 117,
-        }}
-      >
+      <div className={style.header}>
         <div>
           <Title />
           <Logo />

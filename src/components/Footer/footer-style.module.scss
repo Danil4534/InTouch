@@ -1,30 +1,8 @@
-.footerBackground {
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  .footerImg {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    img {
-      width: 80%;
-      height: 100%;
-    }
-  }
-  img {
-    width: 100%;
-    height: 100%;
-  }
-}
-
 .Logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
   h1 {
     height: 121px;
     color: white;
@@ -58,4 +36,57 @@
       rgb(152, 201, 0) 4.84068px -2.11766px 0px,
       rgb(152, 201, 0) 4.9978px -1.132717px 0px, 0px 5px 5px rgba(0, 0, 0, 0.65);
   }
+}
+
+.footerBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerTextContentWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  background-color: #48a651;
+  .footerTextContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+.footerInfoProgramer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .socialLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  p {
+    font-size: 20px;
+    color: white;
+  }
+  .item {
+    img {
+      width: 40px;
+      height: 40px;
+      padding-top: 5px;
+      margin-right: 10px;
+    }
+  }
+}
+.footerFio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

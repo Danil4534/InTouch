@@ -46,7 +46,7 @@
     position: absolute;
     bottom: -30px;
     left: 1120px;
-    animation: finish 3s linear;
+    animation: finish 0.9s linear;
     p {
       font-size: 26px;
       color: white;
@@ -54,40 +54,6 @@
     }
   }
 
-  @keyframes finish {
-    0% {
-      top: -40px;
-      left: 200px;
-    }
-    12% {
-      top: -40px;
-      left: 1200px;
-    }
-    24% {
-      top: 40px;
-      left: 1210px;
-    }
-    36% {
-      top: 60px;
-      left: 1210px;
-    }
-    48% {
-      top: 100px;
-      left: 120px;
-    }
-    68% {
-      top: 200px;
-      left: 120px;
-    }
-    84% {
-      top: 220px;
-      left: 1120px;
-    }
-    100% {
-      top: 220px;
-      left: 1120px;
-    }
-  }
   .item {
     padding-top: 20px;
     display: flex;
@@ -107,7 +73,6 @@
     p {
       position: absolute;
       bottom: -20px;
-
       text-transform: uppercase;
     }
   }
@@ -123,30 +88,180 @@
   position: absolute;
   top: -62px;
   left: 420px;
+  animation: idea 0.5s linear;
 }
 .itemClassroom {
   position: absolute;
   top: -62px;
   left: 670px;
+  animation: classroom 0.5s linear;
 }
 
 .itemCourse {
   position: absolute;
   top: -62px;
   left: 900px;
+  animation: course 0.5s linear;
 }
 .itemMembers {
   position: absolute;
   top: 200px;
   left: 420px;
+  animation: members 1s linear;
 }
 .itemChats {
   position: absolute;
   top: 200px;
   left: 670px;
+  animation: chat 1s linear;
 }
 .itemCalendar {
   position: absolute;
   top: 200px;
   left: 900px;
+  animation: calendar 1s linear;
+}
+@keyframes idea {
+  0% {
+    top: -62px;
+    left: 200px;
+  }
+  50% {
+    top: -62px;
+    left: 320px;
+  }
+  100% {
+    top: -62px;
+    left: 420px;
+  }
+}
+@keyframes classroom {
+  0% {
+    top: -62px;
+    left: 200px;
+  }
+  100% {
+    top: -62px;
+    left: 670px;
+  }
+}
+@keyframes course {
+  0% {
+    top: -62px;
+    left: 200px;
+  }
+  100% {
+    top: -62px;
+    left: 900px;
+  }
+}
+@keyframes members {
+  0% {
+    top: -40px;
+    left: 200px;
+  }
+  12% {
+    top: -40px;
+    left: 1200px;
+  }
+  24% {
+    top: 40px;
+    left: 1210px;
+  }
+  36% {
+    top: 60px;
+    left: 1210px;
+  }
+  48% {
+    top: 100px;
+    left: 120px;
+  }
+  68% {
+    top: 200px;
+    left: 120px;
+  }
+}
+@keyframes chat {
+  0% {
+    top: -40px;
+    left: 200px;
+  }
+  12% {
+    top: -40px;
+    left: 1200px;
+  }
+  24% {
+    top: 40px;
+    left: 1210px;
+  }
+  36% {
+    top: 60px;
+    left: 1210px;
+  }
+  48% {
+    top: 100px;
+    left: 120px;
+  }
+  68% {
+    top: 200px;
+    left: 120px;
+  }
+}
+@keyframes finish {
+  0% {
+    top: -40px;
+    left: 200px;
+  }
+  14.28% {
+    top: -40px;
+    left: 1200px;
+  }
+  28.56% {
+    top: 60px;
+    left: 1210px;
+  }
+  42.84% {
+    top: 80px;
+    left: 1210px;
+  }
+  57.12% {
+    top: 100px;
+    left: 120px;
+  }
+  85.68% {
+    top: 210px;
+    left: 120px;
+  }
+  100% {
+    left: 1120px;
+  }
+}
+@keyframes calendar {
+  0% {
+    top: -40px;
+    left: 200px;
+  }
+  12% {
+    top: -40px;
+    left: 1200px;
+  }
+  24% {
+    top: 40px;
+    left: 1210px;
+  }
+  36% {
+    top: 60px;
+    left: 1210px;
+  }
+  48% {
+    top: 100px;
+    left: 120px;
+  }
+  68% {
+    top: 210px;
+    left: 120px;
+  }
+  100% {
+    left: 900px;
+  }
 }
