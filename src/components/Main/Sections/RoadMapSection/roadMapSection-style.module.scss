@@ -93,7 +93,7 @@
   top: -140px;
 }
 .itemIdeaActive {
-  animation: idea 0.5s linear forwards;
+  animation: idea 1s linear forwards;
 }
 .itemClassroom {
   position: absolute;
@@ -101,7 +101,7 @@
   left: 150px;
 }
 .itemClassroomActive {
-  animation: classroom 0.5s linear forwards;
+  animation: classroom 1s linear forwards;
 }
 .itemCourse {
   position: absolute;
@@ -109,7 +109,7 @@
   left: 320px;
 }
 .itemCourseActive {
-  animation: course 0.5s linear forwards;
+  animation: course 1s linear forwards;
 }
 .itemMembers {
   position: absolute;
@@ -141,6 +141,7 @@
     transform: scale(1.1);
   }
 }
+
 @keyframes idea {
   0% {
     top: -140px;
@@ -170,47 +171,13 @@
     top: -140px;
   }
 }
+
 @keyframes members {
   0% {
-    top: -140px;
-    left: 200px;
-  }
-  10% {
-    top: -140px;
-    left: 500px;
-  }
-  20% {
-    top: -100px;
-    left: 500px;
-  }
-  30% {
-    top: -60px;
-    left: 500px;
-  }
-  40% {
-    top: -40px;
-    left: 500px;
-  }
-  50% {
-    top: -40px;
-    left: 200px;
-  }
-  60% {
-    top: -40px;
-    left: -650px;
-  }
-  70% {
-    top: 60px;
-    left: -650px;
+    top: 130px;
+    left: 150px;
   }
 
-  80% {
-    top: 100px;
-    left: -650px;
-  }
-  90% {
-    top: 130px;
-  }
   100% {
     top: 130px;
     left: -300px;
@@ -218,45 +185,10 @@
 }
 @keyframes chat {
   0% {
-    top: -140px;
+    top: 140px;
     left: 200px;
   }
-  10% {
-    top: -140px;
-    left: 400px;
-  }
-  20% {
-    top: -100px;
-    left: 400px;
-  }
-  30% {
-    top: -60px;
-    left: 400px;
-  }
-  40% {
-    top: -40px;
-    left: 400px;
-  }
-  50% {
-    top: -40px;
-    left: 100px;
-  }
-  60% {
-    top: -40px;
-    left: -750px;
-  }
-  70% {
-    top: 60px;
-    left: -750px;
-  }
 
-  80% {
-    top: 100px;
-    left: -750px;
-  }
-  90% {
-    top: 130px;
-  }
   100% {
     top: 130px;
     left: -150px;
@@ -265,47 +197,183 @@
 
 @keyframes calendar {
   0% {
-    top: -140px;
+    top: 140px;
     left: 200px;
   }
-  10% {
-    top: -140px;
-    left: 300px;
-  }
-  20% {
-    top: -100px;
-    left: 300px;
-  }
-  30% {
-    top: -60px;
-    left: 300px;
-  }
-  40% {
-    top: -40px;
-    left: 300px;
-  }
-  50% {
-    top: -40px;
-    left: 100px;
-  }
-  60% {
-    top: -40px;
-    left: -850px;
-  }
-  70% {
-    top: 60px;
-    left: -850px;
-  }
 
-  80% {
-    top: 100px;
-    left: -850px;
-  }
-  90% {
-    top: 130px;
-  }
   100% {
     top: 130px;
     left: 20px;
   }
 }
+
+// First Template
+// @keyframes idea {
+//   0% {
+//     top: -140px;
+//     left: -250px;
+//   }
+//   100% {
+//     top: -140px;
+//     left: 0;
+//   }
+// }
+// @keyframes classroom {
+//   0% {
+//     top: -140px;
+//     left: -300px;
+//   }
+
+//   100% {
+//     top: -140px;
+//   }
+// }
+// @keyframes course {
+//   0% {
+//     top: -140px;
+//     left: -300px;
+//   }
+//   100% {
+//     top: -140px;
+//   }
+// }
+
+// @keyframes members {
+//   0% {
+//     top: -140px;
+//     left: 200px;
+//   }
+//   10% {
+//     top: -140px;
+//     left: 500px;
+//   }
+//   20% {
+//     top: -100px;
+//     left: 500px;
+//   }
+//   30% {
+//     top: -60px;
+//     left: 500px;
+//   }
+//   40% {
+//     top: -40px;
+//     left: 500px;
+//   }
+//   50% {
+//     top: -40px;
+//     left: 200px;
+//   }
+//   60% {
+//     top: -40px;
+//     left: -650px;
+//   }
+//   70% {
+//     top: 60px;
+//     left: -650px;
+//   }
+
+//   80% {
+//     top: 100px;
+//     left: -650px;
+//   }
+//   90% {
+//     top: 130px;
+//   }
+//   100% {
+//     top: 130px;
+//     left: -300px;
+//   }
+// }
+// @keyframes chat {
+//   0% {
+//     top: -140px;
+//     left: 200px;
+//   }
+//   10% {
+//     top: -140px;
+//     left: 400px;
+//   }
+//   20% {
+//     top: -100px;
+//     left: 400px;
+//   }
+//   30% {
+//     top: -60px;
+//     left: 400px;
+//   }
+//   40% {
+//     top: -40px;
+//     left: 400px;
+//   }
+//   50% {
+//     top: -40px;
+//     left: 100px;
+//   }
+//   60% {
+//     top: -40px;
+//     left: -750px;
+//   }
+//   70% {
+//     top: 60px;
+//     left: -750px;
+//   }
+
+//   80% {
+//     top: 100px;
+//     left: -750px;
+//   }
+//   90% {
+//     top: 130px;
+//   }
+//   100% {
+//     top: 130px;
+//     left: -150px;
+//   }
+// }
+
+// @keyframes calendar {
+//   0% {
+//     top: -140px;
+//     left: 200px;
+//   }
+//   10% {
+//     top: -140px;
+//     left: 300px;
+//   }
+//   20% {
+//     top: -100px;
+//     left: 300px;
+//   }
+//   30% {
+//     top: -60px;
+//     left: 300px;
+//   }
+//   40% {
+//     top: -40px;
+//     left: 300px;
+//   }
+//   50% {
+//     top: -40px;
+//     left: 100px;
+//   }
+//   60% {
+//     top: -40px;
+//     left: -850px;
+//   }
+//   70% {
+//     top: 60px;
+//     left: -850px;
+//   }
+
+//   80% {
+//     top: 100px;
+//     left: -850px;
+//   }
+//   90% {
+//     top: 130px;
+//   }
+//   100% {
+//     top: 130px;
+//     left: 20px;
+//   }
+// }

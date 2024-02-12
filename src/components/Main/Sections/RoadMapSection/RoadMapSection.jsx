@@ -8,11 +8,13 @@ import Tasks from "../../../../assets/svg/Tasks.svg";
 import Chats from "../../../../assets/svg/Chat.svg";
 
 function RoadMapSection() {
-  const [scrollPoint, setScrollPoint] = useState(0);
+  const [isAnimated, setIsAnimated] = useState(false);
 
   const handleScroll = () => {
     const position = window.scrollY;
-    setScrollPoint(position);
+    if (position >= 370) {
+      setIsAnimated(true);
+    }
   };
 
   window.addEventListener("scroll", handleScroll);
@@ -30,7 +32,7 @@ function RoadMapSection() {
             </div>
             <div
               className={
-                scrollPoint >= 355
+                isAnimated
                   ? `${style.item} ${style.itemIdea} ${style.itemIdeaActive}`
                   : `${style.item} ${style.itemIdea}`
               }
@@ -43,7 +45,7 @@ function RoadMapSection() {
 
             <div
               className={
-                scrollPoint >= 355
+                isAnimated
                   ? `${style.item} ${style.itemClassroom} ${style.itemClassroomActive}`
                   : `${style.item} ${style.itemClassroom}`
               }
@@ -56,7 +58,7 @@ function RoadMapSection() {
 
             <div
               className={
-                scrollPoint >= 355
+                isAnimated
                   ? `${style.item} ${style.itemCourse} ${style.itemCourseActive}`
                   : `${style.item} ${style.itemCourse}`
               }
@@ -69,7 +71,7 @@ function RoadMapSection() {
 
             <div
               className={
-                scrollPoint >= 355
+                isAnimated
                   ? `${style.item} ${style.itemMembers} ${style.itemMembersActive}`
                   : `${style.item} ${style.itemMembers}`
               }
@@ -81,7 +83,7 @@ function RoadMapSection() {
             </div>
             <div
               className={
-                scrollPoint >= 355
+                isAnimated
                   ? `${style.item} ${style.itemChats} ${style.itemChatsActive}`
                   : `${style.item} ${style.itemChats}`
               }
@@ -93,7 +95,7 @@ function RoadMapSection() {
             </div>
             <div
               className={
-                scrollPoint >= 355
+                isAnimated
                   ? `${style.item} ${style.itemCalendar} ${style.itemCalendarActive}`
                   : `${style.item} ${style.itemCalendar}`
               }
@@ -106,7 +108,7 @@ function RoadMapSection() {
 
             <div
               className={
-                scrollPoint >= 355
+                isAnimated
                   ? `${style.circle} ${style.finish} ${style.finishActive}`
                   : `${style.circle} ${style.finish}`
               }
