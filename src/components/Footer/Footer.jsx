@@ -29,7 +29,7 @@ function Footer() {
           <div className={style.footerInfoProgramer}>
             <div className={style.footerFio}>
               <img src={YarikPhoto} alt="" />
-              <p>Popov Yaroslav</p>
+              <p>Yaroslav Popov</p>
             </div>
             <div className={style.socialLinks}>
               <div className={style.item}>
@@ -46,7 +46,7 @@ function Footer() {
           <div className={style.footerInfoProgramer}>
             <div className={style.footerFio}>
               <img src={AlinaPhoto} alt="" />
-              <p>Khudolii Alina</p>
+              <p>Alina Khudolii</p>
             </div>
             <div className={style.socialLinks}>
               <div className={style.item}>
@@ -63,7 +63,7 @@ function Footer() {
           <div className={style.footerInfoProgramer}>
             <div className={style.footerFio}>
               <img src={AndreyPhoto} alt="" />
-              <p>Evseev Andrey</p>
+              <p>Andrey Evseev</p>
             </div>
             <div className={style.socialLinks}>
               <div className={style.item}>
@@ -80,7 +80,7 @@ function Footer() {
           <div className={style.footerInfoProgramer}>
             <div className={style.footerFio}>
               <img src={DanilPhoto} alt="" />
-              <p>Tsapok Danil</p>
+              <p>Danil Tsapok</p>
             </div>
             <div className={style.socialLinks}>
               <div className={style.item}>

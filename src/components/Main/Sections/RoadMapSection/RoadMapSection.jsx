@@ -3,7 +3,7 @@ import style from "./roadMapSection-style.module.scss";
 import Idea from "./../../../../assets/svg/Idea.svg";
 import Classroom from "./../../../../assets/svg/Classroom.svg";
 import Management from "../../../../assets/svg/Management.svg";
-import GoogleCalendar from "../../../../assets/svg/Google Calendar.svg";
+import GoogleCalendar from "../../../../assets/svg/Google Calendar2.svg";
 import Tasks from "../../../../assets/svg/Tasks.svg";
 import Chats from "../../../../assets/svg/Chat.svg";
 

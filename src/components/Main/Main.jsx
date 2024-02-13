@@ -9,6 +9,7 @@ import BackCircle from "./Sections/HeaderSection/components/circles/BackCircle";
 import TechnologyStackSection from "./Sections/TechnologyStackSection/TechnologyStackSection";
 import Footer from "../Footer/Footer";
 import RoadMapSection from "./Sections/RoadMapSection/RoadMapSection";
+import Navbar from "../Navbar/Navbar";
 function Main() {
   return (
     <div className={style.main}>

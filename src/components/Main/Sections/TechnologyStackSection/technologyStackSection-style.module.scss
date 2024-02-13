@@ -15,6 +15,7 @@
   gap: 40px;
 
   position: relative;
+  z-index: -1;
 }
 .infinitySlider::before {
   position: absolute;

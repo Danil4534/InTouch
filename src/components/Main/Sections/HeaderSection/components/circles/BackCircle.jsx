@@ -4,9 +4,9 @@ function BackCircle() {
   return (
     <>
       <div className={style.SecondCircleBack}>
-        <div>
+        {/* <div>
           <p></p>
-        </div>
+        </div> */}
         {/* <div>
           <p></p>
         </div> */}

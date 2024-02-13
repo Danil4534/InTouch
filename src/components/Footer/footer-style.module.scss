@@ -64,6 +64,26 @@
     }
   }
 }
+@media (max-width: 1440px) {
+  .footerTextContentWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    background-color: #48a651;
+    .footerTextContent {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}
 .footerInfoProgramer {
   display: flex;
   flex-direction: column;

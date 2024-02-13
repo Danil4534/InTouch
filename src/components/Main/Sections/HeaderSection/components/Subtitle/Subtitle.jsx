@@ -4,10 +4,10 @@ function Subtitle() {
   return (
     <div>
       <ul className={style.ul}>
-        <li>Popov Yaroslav</li>
-        <li>Khudolii Alina</li>
-        <li>Evseev Andrey</li>
-        <li>Tsapok Danil</li>
+        <li>Yaroslav Popov</li>
+        <li>Alina Khudolii </li>
+        <li>Andrey Evseev</li>
+        <li>Danil Tsapok</li>
       </ul>
     </div>
   );

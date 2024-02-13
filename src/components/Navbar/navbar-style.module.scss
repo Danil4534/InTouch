@@ -1,0 +1,45 @@
+.navbarWrapper {
+  position: fixed;
+}
+.navbarBody {
+  width: 80px;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  padding-top: 70px;
+  height: 100vh;
+  background-color: white;
+  .navbarBtns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    align-items: center;
+    height: 100%;
+    position: relative;
+
+    button {
+      width: 50px;
+      height: 35px;
+      background-color: #f5f5f5;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      &:hover {
+        transition: 0.2s ease-in-out;
+        background-color: #48a651;
+      }
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    .btnActive {
+      background-color: #48a651;
+    }
+    .navbarSettingsBtn {
+      position: absolute;
+      bottom: 20px;
+    }
+  }
+}

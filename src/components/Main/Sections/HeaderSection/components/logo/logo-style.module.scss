@@ -8,6 +8,15 @@
   img {
     width: 100px;
     height: 100px;
+    animation: animationLogo 1s ease-in-out;
+  }
+  @keyframes animationLogo {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(380deg);
+    }
   }
   h1 {
     user-select: none;
