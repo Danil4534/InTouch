@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import style from "./auth-style.module.scss";
 import Title from "../../Main/Sections/HeaderSection/components/Title/Title";
@@ -7,6 +7,13 @@ import GoogleIcon from "../../../assets/svg/googleIcon.svg";
 import LockIcon from "../../../assets/svg/LockIcon.svg";
 import EmailIcon from "../../../assets/svg/emailIcon.svg";
 function AuthModal({ authModalActive, setAuthModalActive }) {
+  useEffect(() => {
+    if (authModalActive) {
+      document.getElementsByTagName("body")[0].classList.add("modal-open");
+    } else {
+      document.getElementsByTagName("body")[0].classList.remove("modal-open");
+    }
+  }, [authModalActive]);
   return (
     <div
       className={
