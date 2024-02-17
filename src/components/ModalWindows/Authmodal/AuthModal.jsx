@@ -1,13 +1,62 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-function AuthModal() {
+import style from "./auth-style.module.scss";
+import Title from "../../Main/Sections/HeaderSection/components/Title/Title";
+import Logo from "../../Main/Sections/HeaderSection/components/logo/Logo";
+import GoogleIcon from "../../../assets/svg/googleIcon.svg";
+function AuthModal({ authModalActive, setAuthModalActive }) {
   return (
-    <div>
-      <h1>AuthModal</h1>
-      <Link to="/">
-        <button>Back</button>
-      </Link>
+    <div
+      className={
+        authModalActive
+          ? `${style.authModal} ${style.active}`
+          : `${style.authModal}`
+      }
+      onClick={() => setAuthModalActive(false)}
+    >
+      <div className={style.blurBackground}></div>
+      <div className={style.loginLogo}>
+        <Logo />
+      </div>
+      <div
+        className={
+          authModalActive
+            ? `${style.authModalBody} ${style.active}`
+            : `${style.authModalBody}`
+        }
+        onClick={(e) => e.stopPropagation()}
+      >
+        <form className={style.formBody}>
+          <div className={style.formTitle}>
+            <h1>Login</h1>
+          </div>
+          <div className={style.formInfoBlock}>
+            <div className={style.emailSection}>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div className={style.passwordSection}>
+              <input type="password" placeholder="Password" />
+            </div>
+            <div className={style.formBtn}>
+              <button>Log in</button>
+            </div>
+            <div className={style.formOR}>
+              <hr />
+              <p>Or</p>
+              <hr />
+            </div>
+            <div className={style.googleBtn}>
+              <button>
+                <img src={GoogleIcon} alt="" />
+                Continue with Google
+              </button>
+              <p>
+                Don`t have an account?<span> Register</span>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

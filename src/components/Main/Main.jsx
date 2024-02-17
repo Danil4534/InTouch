@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Header/Header";
 import HeaderSection from "./Sections/HeaderSection/HeaderSection";
 import style from "./main-style.module.scss";
@@ -10,10 +10,13 @@ import TechnologyStackSection from "./Sections/TechnologyStackSection/Technology
 import Footer from "../Footer/Footer";
 import RoadMapSection from "./Sections/RoadMapSection/RoadMapSection";
 import Navbar from "../Navbar/Navbar";
+import AuthModal from "../ModalWindows/Authmodal/AuthModal";
 function Main() {
+  const [authModalActive, setAuthModalActive] = useState(false);
+  console.log(authModalActive);
   return (
     <div className={style.main}>
-      <HeaderSection />
+      <HeaderSection setAuthModalActive={setAuthModalActive} />
       <TechnologyStackSection />
       <RoadMapSection />
       <div className={style.mainAboutUsColorPalette}>
@@ -25,6 +28,10 @@ function Main() {
         <BackCircle />
       </div>
       <Footer />
+      <AuthModal
+        authModalActive={authModalActive}
+        setAuthModalActive={setAuthModalActive}
+      />
     </div>
   );
 }

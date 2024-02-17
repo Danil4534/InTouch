@@ -8,7 +8,6 @@ function Router() {
   return (
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/login" element={<AuthModal />} />
       <Route path="/test" element={<Test />} />
     </Routes>
   );
