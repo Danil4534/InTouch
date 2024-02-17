@@ -65,7 +65,14 @@
 .emailSection {
   display: flex;
   flex-direction: column;
-
+  position: relative;
+  img {
+    position: absolute;
+    right: 10px;
+    top: 23%;
+    width: 25px;
+    height: 25px;
+  }
   input {
     height: 40px;
     border-radius: 10px;
@@ -88,6 +95,14 @@
 .passwordSection {
   display: flex;
   flex-direction: column;
+  position: relative;
+  img {
+    position: absolute;
+    right: 10px;
+    top: 23%;
+    width: 25px;
+    height: 25px;
+  }
   input {
     height: 40px;
     border-radius: 10px;
@@ -97,12 +112,9 @@
     display: flex;
     align-items: center;
     caret-color: green;
-
     padding: 0 0 0 10px;
   }
-  input:hover {
-    cursor: pointer;
-  }
+
   input::placeholder {
     font-size: 16px;
     display: flex;

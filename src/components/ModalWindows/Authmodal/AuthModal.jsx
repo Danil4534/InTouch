@@ -4,6 +4,8 @@ import style from "./auth-style.module.scss";
 import Title from "../../Main/Sections/HeaderSection/components/Title/Title";
 import Logo from "../../Main/Sections/HeaderSection/components/logo/Logo";
 import GoogleIcon from "../../../assets/svg/googleIcon.svg";
+import LockIcon from "../../../assets/svg/LockIcon.svg";
+import EmailIcon from "../../../assets/svg/emailIcon.svg";
 function AuthModal({ authModalActive, setAuthModalActive }) {
   return (
     <div
@@ -32,9 +34,11 @@ function AuthModal({ authModalActive, setAuthModalActive }) {
           </div>
           <div className={style.formInfoBlock}>
             <div className={style.emailSection}>
+              <img src={EmailIcon} alt="" />
               <input type="email" placeholder="Email" />
             </div>
             <div className={style.passwordSection}>
+              <img src={LockIcon} alt="" />
               <input type="password" placeholder="Password" />
             </div>
             <div className={style.formBtn}>
