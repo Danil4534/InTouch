@@ -15,11 +15,15 @@ function Header() {
           </div>
         </div>
         <div className={style.headerRightSide}>
+          <div className={style.profileLang}>
+            <p>EN</p>
+          </div>
           <img src={SunIcon} alt="" />
           <div className={style.profile}>
             <div className={style.profileIcon}>
               <img src={ProfileIcon} alt="" />
             </div>
+
             <div className={style.profileNickname}>
               <p>Hi! user</p>
             </div>

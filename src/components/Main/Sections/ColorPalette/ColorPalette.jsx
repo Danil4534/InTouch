@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./colorPalette-style.module.scss";
 function ColorPalette() {
+  const [isAnimated, setIsAnimated] = useState(false);
+  const handleScroll = () => {
+    const position = window.scrollY;
+    if (position >= 370) {
+      setIsAnimated(true);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
   return (
     <>
       <div className={style.main}>

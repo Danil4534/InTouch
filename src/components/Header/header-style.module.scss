@@ -67,11 +67,17 @@ header {
     justify-content: center;
     align-items: center;
     gap: 15px;
+    img {
+      &:hover {
+        cursor: pointer;
+      }
+    }
     .profile {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 15px;
+
       .profileIcon {
         width: 40px;
         height: 40px;
@@ -79,6 +85,9 @@ header {
         display: flex;
         justify-content: center;
         border: 1px solid #48a651;
+        &:hover {
+          cursor: pointer;
+        }
       }
       .profileNickName {
         font-family: "ABeeZee", sans-serif;
@@ -86,4 +95,12 @@ header {
       }
     }
   }
+}
+.profileLang {
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: #48a651;
+  font-size: 16px;
+
+  font-family: "ABeeZee", sans-serif;
 }

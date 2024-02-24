@@ -1,12 +1,12 @@
 import React from "react";
 import style from "./navbar-style.module.scss";
 import { Link } from "react-router-dom";
-import HomeIcon from "../../assets/svg/Home Page.svg";
-import CalendarIcon from "../../assets/svg/Google Calendar.svg";
-import GroupIcon from "../../assets/svg/People Skin Type 7.svg";
-import MeetingIcon from "../../assets/svg/Headset.svg";
-import MessageIcon from "../../assets/svg/Letter.svg";
-import SettingsIcon from "../../assets/svg/Settings.svg";
+import HomeIcon from "../../../../assets/svg/Home Page.svg";
+import CalendarIcon from "../../../../assets/svg/Google Calendar.svg";
+import GroupIcon from "../../../../assets/svg/People Skin Type 7.svg";
+import MeetingIcon from "../../../../assets/svg/Headset.svg";
+import MessageIcon from "../../../../assets/svg/Letter.svg";
+import SettingsIcon from "../../../../assets/svg/Settings.svg";
 function Navbar() {
   return (
     <>

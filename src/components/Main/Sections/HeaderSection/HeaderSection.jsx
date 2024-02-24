@@ -5,14 +5,15 @@ import Circles from "./components/circles/Circles";
 import Subtitle from "./components/Subtitle/Subtitle";
 import BtnLogin from "./components/btnLogIn/BtnLogin";
 import style from "./headerSection-style.module.scss";
-const HeaderSection = ({ setAuthModalActive }) => {
+import useUsers from "../../../../store/useStore";
+const HeaderSection = () => {
   return (
     <div>
       <div className={style.header}>
         <div>
           <Title />
           <Logo />
-          <BtnLogin setAuthModalActive={setAuthModalActive} />
+          <BtnLogin />
           <Subtitle />
         </div>
         <Circles />

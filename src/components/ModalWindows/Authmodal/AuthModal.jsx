@@ -6,22 +6,27 @@ import Logo from "../../Main/Sections/HeaderSection/components/logo/Logo";
 import GoogleIcon from "../../../assets/svg/googleIcon.svg";
 import LockIcon from "../../../assets/svg/LockIcon.svg";
 import EmailIcon from "../../../assets/svg/emailIcon.svg";
-function AuthModal({ authModalActive, setAuthModalActive }) {
+
+import useStore from "../../../store/useStore";
+function AuthModal() {
+  const { authModalState, setAuthModalDisActive } = useStore();
+  console.log(authModalState);
+
   useEffect(() => {
-    if (authModalActive) {
+    if (authModalState) {
       document.getElementsByTagName("body")[0].classList.add("modal-open");
     } else {
       document.getElementsByTagName("body")[0].classList.remove("modal-open");
     }
-  }, [authModalActive]);
+  }, [authModalState]);
   return (
     <div
       className={
-        authModalActive
+        authModalState
           ? `${style.authModal} ${style.active}`
           : `${style.authModal}`
       }
-      onClick={() => setAuthModalActive(false)}
+      onClick={() => setAuthModalDisActive()}
     >
       <div className={style.blurBackground}></div>
       <div className={style.loginLogo}>
@@ -29,7 +34,7 @@ function AuthModal({ authModalActive, setAuthModalActive }) {
       </div>
       <div
         className={
-          authModalActive
+          authModalState
             ? `${style.authModalBody} ${style.active}`
             : `${style.authModalBody}`
         }

@@ -9,14 +9,13 @@ import BackCircle from "./Sections/HeaderSection/components/circles/BackCircle";
 import TechnologyStackSection from "./Sections/TechnologyStackSection/TechnologyStackSection";
 import Footer from "../Footer/Footer";
 import RoadMapSection from "./Sections/RoadMapSection/RoadMapSection";
-import Navbar from "../Navbar/Navbar";
+
 import AuthModal from "../ModalWindows/Authmodal/AuthModal";
 function Main() {
-  const [authModalActive, setAuthModalActive] = useState(false);
-  console.log(authModalActive);
+  // const [authModalActive, setAuthModalActive] = useState(false);
   return (
     <div className={style.main}>
-      <HeaderSection setAuthModalActive={setAuthModalActive} />
+      <HeaderSection />
       <TechnologyStackSection />
       <RoadMapSection />
       <div className={style.mainAboutUsColorPalette}>

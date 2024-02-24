@@ -73,7 +73,19 @@
     width: 25px;
     height: 25px;
   }
+
   input {
+    height: 40px;
+    border-radius: 10px;
+    border: 0.5px solid #808080;
+    box-shadow: 0px 2px 4px #80808048;
+    outline: none;
+    display: flex;
+    align-items: center;
+    caret-color: green;
+    padding: 0 0 0 10px;
+  }
+  #outlined-basic {
     height: 40px;
     border-radius: 10px;
     border: 0.5px solid #808080;
