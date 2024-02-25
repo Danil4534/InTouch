@@ -11,6 +11,58 @@
     top: 10%;
   }
 }
+.circlesAlina {
+  width: 100%;
+  position: absolute;
+  top: 23%;
+  left: -100px;
+  p {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    top: 130px;
+    left: 40px;
+  }
+}
+.circlesYaroslav {
+  width: 100%;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  p {
+    position: absolute;
+    z-index: 999;
+    top: 130px;
+    left: 10px;
+    width: 100%;
+  }
+}
+.circlesAndrey {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: -120px;
+  p {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    top: 130px;
+    left: 30px;
+  }
+}
+.circlesDanil {
+  width: 100%;
+  position: absolute;
+  top: 73%;
+  left: -50px;
+  p {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    top: 130px;
+    left: 30px;
+  }
+}
 .FirstCircle {
   width: 840px;
   height: 840px;
@@ -21,6 +73,7 @@
   border-radius: 50%;
   box-shadow: -5px 2px #48a651;
   animation: 1s anim ease-in-out;
+  position: relative;
 }
 .SecondCircle {
   width: 740px;

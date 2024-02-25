@@ -27,10 +27,7 @@ function Main() {
         <BackCircle />
       </div>
       <Footer />
-      <AuthModal
-        authModalActive={authModalActive}
-        setAuthModalActive={setAuthModalActive}
-      />
+      <AuthModal />
     </div>
   );
 }
