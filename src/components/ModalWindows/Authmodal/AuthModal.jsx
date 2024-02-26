@@ -6,11 +6,12 @@ import Logo from "../../Main/Sections/HeaderSection/components/logo/Logo";
 import GoogleIcon from "../../../assets/svg/googleIcon.svg";
 import LockIcon from "../../../assets/svg/LockIcon.svg";
 import EmailIcon from "../../../assets/svg/emailIcon.svg";
-
+import * as Yup from "yup";
 import useStore from "../../../store/useStore";
+
+import { useFormik } from "formik";
 function AuthModal() {
   const { authModalState, setAuthModalDisActive } = useStore();
-  console.log(authModalState);
 
   useEffect(() => {
     if (authModalState) {
@@ -19,6 +20,23 @@ function AuthModal() {
       document.getElementsByTagName("body")[0].classList.remove("modal-open");
     }
   }, [authModalState]);
+
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: Yup.object({
+      email: Yup.string().email("Invalid email").required("Input email"),
+      password: Yup.string().required("Input password"),
+    }),
+    onSubmit: async (values) => {
+      try {
+        console.log(values.email, values.password);
+      } catch (e) {}
+    },
+  });
+
   return (
     <div
       className={
@@ -40,21 +58,50 @@ function AuthModal() {
         }
         onClick={(e) => e.stopPropagation()}
       >
-        <form className={style.formBody}>
+        <form
+          className={style.formBody}
+          method="post"
+          onSubmit={formik.handleSubmit}
+        >
           <div className={style.formTitle}>
             <h1>Login</h1>
           </div>
           <div className={style.formInfoBlock}>
             <div className={style.emailSection}>
               <img src={EmailIcon} alt="" />
-              <input type="email" placeholder="Email" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.email}
+              />
+              {formik.touched.email && formik.errors.email ? (
+                <p
+                  style={{
+                    color: "red",
+                    fontSize: 14,
+                    position: "relative",
+                  }}
+                >
+                  {formik.errors.email}
+                </p>
+              ) : null}
             </div>
             <div className={style.passwordSection}>
               <img src={LockIcon} alt="" />
-              <input type="password" placeholder="Password" />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.password}
+              />
             </div>
             <div className={style.formBtn}>
-              <button>Log in</button>
+              <button type="Submit">Log in</button>
             </div>
             <div className={style.formOR}>
               <hr />

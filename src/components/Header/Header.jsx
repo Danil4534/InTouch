@@ -4,6 +4,7 @@ import LogoYoda from "../../assets/svg/Baby Yoda.svg";
 import ProfileIcon from "../../assets/svg/Profile.svg";
 import SunIcon from "../../assets/icons/Sun.svg";
 import useStore from "../../store/useStore";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -20,6 +21,7 @@ function Header() {
   }
 
   const day = currentTime.getDate();
+  const dayOfWeek = currentTime.getDay();
   const month = currentTime.getMonth();
   const year = currentTime.getFullYear();
   const time = currentTime.toLocaleTimeString();
@@ -38,7 +40,18 @@ function Header() {
     "November",
     "December",
   ];
-  const formatedDate = `${day} ${months[month]} ${year}`;
+  const week = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  const formatedDate = `${day}  ${months[month]} ${year} ${
+    week[dayOfWeek - 1]
+  }`;
 
   return (
     <>
@@ -56,10 +69,11 @@ function Header() {
           </div>
           <img src={SunIcon} alt="" />
           <div className={style.profile}>
-            <div className={style.profileIcon}>
-              <img src={ProfileIcon} alt="" />
-            </div>
-
+            <Link to="/profile">
+              <div className={style.profileIcon}>
+                <img src={ProfileIcon} alt="" />
+              </div>
+            </Link>
             <div className={style.profileNickname}>
               <p>Hi! user</p>
             </div>

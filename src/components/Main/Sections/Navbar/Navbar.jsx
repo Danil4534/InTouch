@@ -13,7 +13,7 @@ function Navbar() {
       <div className={style.navbarWrapper}>
         <div className={style.navbarBody}>
           <div className={style.navbarBtns}>
-            <Link to="/test">
+            <Link to="/">
               <button>
                 <img src={HomeIcon} alt="" />
               </button>
