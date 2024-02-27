@@ -7,8 +7,8 @@ function Layout() {
   return (
     <>
       <Header />
-      <Outlet />
       <Navbar />
+      <Outlet />
     </>
   );
 }

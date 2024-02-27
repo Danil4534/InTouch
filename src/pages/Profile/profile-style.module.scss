@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+
+.profileMain {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 115px 150px;
+  .profileTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  .profileLine {
+    width: 100%;
+    height: 4px;
+    background-color: #afafaf85;
+    border-radius: 10px;
+  }
+  .profileContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 25px;
+    .profileUserCard {
+      width: 335px;
+      height: 600px;
+      background-color: #fff;
+      border-radius: 30px;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      padding: 36px 42px 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: 1s anim ease-in-out;
+      .profileUserImg {
+        width: 115px;
+        height: 115px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        .profileIcon {
+          width: 115px;
+          height: 115px;
+        }
+        .profileEditImg {
+          position: absolute;
+          right: 0;
+          width: 35px;
+          height: 35px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #fff;
+          border-radius: 50%;
+          box-shadow: 0px 2px 10px grey;
+        }
+      }
+      .profileNick {
+        margin-top: 28px;
+        p {
+          margin-top: 10px;
+          font-family: "ABeeZee", sans-serif;
+          font-style: italic;
+          font-size: 16px;
+        }
+      }
+      .profileStatus {
+        width: 85px;
+        height: 26px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 11px;
+        border-radius: 10px;
+        background-color: #b9fbc0;
+        margin-top: 10px;
+        .circle {
+          width: 10px;
+          height: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          background-color: green;
+        }
+        p {
+          font-family: "ABeeZee", sans-serif;
+          font-style: italic;
+          color: #48a651;
+        }
+      }
+      .profileInfo {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 17px;
+      }
+      .profileInfo div {
+        width: 100%;
+        height: 60px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        border: 1px solid #6666;
+        padding: 6px 18px 12px;
+        h4 {
+          color: #6666;
+          font-family: "ABeeZee", sans-serif;
+          font-style: italic;
+          margin-bottom: 5px;
+        }
+      }
+      .BtnFollow {
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+        display: none;
+        button {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          outline: none;
+          background-color: #48a651;
+          border: 2px solid transparent;
+          border-radius: 10px;
+          color: white;
+          font-size: 26px;
+          font-family: "ABeeZee", sans-serif;
+          box-shadow: 0px 2px 5px grey;
+
+          transition: 0.3s ease-in-out;
+          user-select: none;
+          outline: none;
+          &:hover {
+            cursor: pointer;
+            color: green;
+            transition: 0.3s ease-in-out;
+            background-color: transparent;
+            border: 2px solid green;
+          }
+        }
+      }
+    }
+    .profileRigthSide {
+      width: calc(100% - 335px);
+
+      padding-left: 30px;
+      .profileRigthSideStatistics {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+      .profileRigthSideStatistics > div {
+        width: 100%;
+        height: 150px;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        animation: 1s anim ease-in-out;
+      }
+      .statisticsItem {
+        padding: 15px;
+        position: relative;
+        p {
+          font-family: "ABeeZee", sans-serif;
+          font-style: italic;
+          font-size: 45px;
+          color: #98c900;
+        }
+        .itemHelp {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background-color: #f5f5f5;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          right: 15px;
+          span {
+            font-size: 16px;
+            font-family: "ABeeZee", sans-serif;
+            font-style: italic;
+          }
+        }
+        h3 {
+          position: absolute;
+          bottom: 15px;
+        }
+        img {
+          position: absolute;
+          right: 15px;
+        }
+      }
+      .profileRigthSideActiveCourse {
+        width: 100%;
+        height: 423px;
+        margin-top: 27px;
+        border-radius: 30px;
+        background-color: #fff;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        animation: 1s anim ease-in-out;
+        padding: 30px;
+        h2 {
+          padding-left: 14px;
+          font-family: "ABeeZee", sans-serif;
+          font-style: italic;
+        }
+        .activeCourseLine {
+          width: 100%;
+          height: 2px;
+          background-color: #afafaf85;
+          border-radius: 10px;
+        }
+        .activeItem {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 5px;
+          .course {
+            padding-left: 5px;
+          }
+          div {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          .ActiveStatus {
+            width: 110px;
+            height: 23px;
+            background-color: #b9fbc0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            .circle {
+              width: 10px;
+              height: 10px;
+              background-color: green;
+              border-radius: 10px;
+            }
+          }
+        }
+        .activeCourseContent {
+          padding: 18px 10px;
+        }
+      }
+    }
+  }
+}
+@keyframes anim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
