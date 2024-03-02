@@ -18,11 +18,37 @@
 .authModalBody {
   width: 400px;
   height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   background-color: #fff;
   border-radius: 10px;
-  overflow: hidden;
   transform: scale(0);
   transition: 0.5s;
+  .loginBox {
+    width: 100%;
+    transition: 0.5s;
+    transform: translateX(0);
+  }
+  .registBox {
+    width: 100%;
+    position: absolute;
+    transition: 0.5s;
+    transform: translateX(500px);
+  }
+  .loginBoxActive {
+    width: 100%;
+    transition: 0.5s;
+    position: absolute;
+    transform: translateX(-500px);
+  }
+  .registBoxActive {
+    width: 100%;
+    position: absolute;
+    transition: 0.5s;
+    transform: translateX(0px);
+  }
 }
 
 .blurBackground {
@@ -52,6 +78,7 @@
   width: 100%;
   padding: 35px 58px;
   height: 100%;
+  position: relative;
   .formTitle {
     display: flex;
     justify-content: center;
@@ -62,7 +89,18 @@
     color: #3a703f;
   }
 }
-.emailSection {
+.btnClose {
+  position: absolute;
+  z-index: 999;
+  top: 10px;
+  right: 10px;
+  img {
+    width: 20px;
+    cursor: pointer;
+  }
+}
+.emailSection,
+.passwordSection {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -86,6 +124,31 @@
     caret-color: green;
     padding: 0 0 0 10px;
     user-select: none;
+    cursor: pointer;
+  }
+  label {
+    position: absolute;
+    top: 45%;
+    left: 15px;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    font-family: "ABeeZee", sans-serif;
+    color: #48a651;
+    cursor: pointer;
+  }
+  input:focus ~ label {
+    transition: 0.5s;
+    top: -2px;
+    background-color: #fff;
+  }
+  input:valid {
+    background-color: #fff;
+  }
+
+  .inputerrorlabel {
+    transition: 0.5s;
+    top: -2px;
+    background-color: #fff;
   }
   #outlined-basic {
     height: 40px;
@@ -106,37 +169,7 @@
     color: #48a651;
   }
 }
-.passwordSection {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  img {
-    position: absolute;
-    right: 10px;
-    top: 23%;
-    width: 25px;
-    height: 25px;
-  }
-  input {
-    height: 40px;
-    border-radius: 10px;
-    border: 0.5px solid #808080;
-    box-shadow: 0px 2px 4px #80808048;
-    outline: none;
-    display: flex;
-    align-items: center;
-    caret-color: green;
-    padding: 0 0 0 10px;
-  }
 
-  input::placeholder {
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    color: #48a651;
-    font-family: "K2D", cursive;
-  }
-}
 .formInfoBlock {
   margin-top: 34px;
   display: flex;
@@ -212,6 +245,7 @@ hr {
       padding-left: 4px;
       color: #3a703f;
       text-decoration: underline;
+      cursor: pointer;
     }
   }
 }

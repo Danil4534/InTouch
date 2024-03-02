@@ -13,7 +13,19 @@ const usersState = [
 const useStore = create((set) => ({
   users: usersState,
   authModalState: false,
+  loginFormActive: true,
+  registerFormActive: false,
   setAuthModalActive: () => set({ authModalState: true }),
   setAuthModalDisActive: () => set({ authModalState: false }),
+  setSwapLoginRegister: () =>
+    set((state) => ({
+      loginFormActive: false,
+      registerFormActive: true,
+    })),
+  setSwapRegisterLogin: () =>
+    set((state) => ({
+      loginFormActive: true,
+      registerFormActive: false,
+    })),
 }));
 export default useStore;

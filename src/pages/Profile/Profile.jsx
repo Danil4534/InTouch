@@ -142,8 +142,8 @@ function Profile() {
               <h2>Active courses</h2>
               <div className={style.activeCourseLine}></div>
               <div className={style.activeCourseContent}>
-                {activeCourses.map((activeCoursesItem) => (
-                  <div className={style.activeItem}>
+                {activeCourses.map((activeCoursesItem, index) => (
+                  <div className={style.activeItem} key={index}>
                     <p>{activeCoursesItem.persent}% </p>
                     <div className={style.course}>
                       <p>{activeCoursesItem.name}</p>
