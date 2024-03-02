@@ -120,7 +120,7 @@ header {
 .switch {
   width: 35px;
   height: 20px;
-  background-color: rgba(19, 18, 18, 0.4);
+  background-color: var(--color2);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -130,6 +130,7 @@ header {
 }
 
 .switchActive {
+  background-color: var(--color4);
   justify-content: flex-end;
 }
 

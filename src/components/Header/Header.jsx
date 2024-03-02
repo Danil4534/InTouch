@@ -9,8 +9,6 @@ import { Link } from "react-router-dom";
 
 function Header() {
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [isOn, setIsOn] = useState(false);
-  // console.log(isOn);
 
   useEffect(() => {
     const timerID = setInterval(() => tick(), 1000);
@@ -18,7 +16,14 @@ function Header() {
       clearInterval(timerID);
     };
   });
-
+  useEffect(() => {
+    const selectedTheme = localStorage.getItem("selectedTheme");
+    if (selectedTheme === "dark") {
+      setDarkMode();
+    } else {
+      setLightMode();
+    }
+  }, []);
   const setDarkMode = () => {
     document.querySelector("body").setAttribute("data-theme", "dark");
     localStorage.setItem("selectedTheme", "dark");
@@ -32,8 +37,11 @@ function Header() {
   selectedTheme === "dark" ? setDarkMode() : setLightMode();
 
   const toggleTheme = (e) => {
-    e.target.checked ? setDarkMode() : setLightMode();
-    setIsOn(!isOn);
+    if (e.target.checked) {
+      setLightMode();
+    } else {
+      setDarkMode();
+    }
   };
   function tick() {
     setCurrentTime(new Date());
@@ -91,7 +99,9 @@ function Header() {
 
           <div
             className={
-              isOn ? `${style.switch}` : `${style.switch} ${style.switchActive}`
+              selectedTheme === "dark"
+                ? `${style.switch} ${style.switchActive}`
+                : `${style.switch} `
             }
             onClick={() => document.querySelector("#checker").click()}
           >
