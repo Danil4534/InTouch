@@ -58,10 +58,10 @@ function Header() {
       <header className={style.header}>
         <div className={style.headerLeftSide}>
           <div className={style.logo}>
-            <Link to="/">
+            <Link to="/" className={style.logoLink}>
               <img src={LogoYoda} alt="" />
+              <h1>nTouch</h1>
             </Link>
-            <h1>nTouch</h1>
           </div>
         </div>
         <div className={style.headerRightSide}>

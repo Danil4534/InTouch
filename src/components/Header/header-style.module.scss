@@ -10,6 +10,7 @@ header {
   padding: 10px 90px;
   position: fixed;
   z-index: 999;
+
   .headerLeftSide {
     .logo {
       display: flex;
@@ -17,6 +18,10 @@ header {
       &:hover {
         cursor: pointer;
         user-select: none;
+      }
+      .logoLink {
+        display: flex;
+        text-decoration: none;
       }
       img {
         width: 50px;
