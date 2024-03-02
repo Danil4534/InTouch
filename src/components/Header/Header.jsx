@@ -4,10 +4,13 @@ import LogoYoda from "../../assets/svg/Baby Yoda.svg";
 import ProfileIcon from "../../assets/svg/Profile.svg";
 import SunIcon from "../../assets/icons/Sun.svg";
 import useStore from "../../store/useStore";
+
 import { Link } from "react-router-dom";
 
 function Header() {
   const [currentTime, setCurrentTime] = useState(new Date());
+  const [isOn, setIsOn] = useState(false);
+  // console.log(isOn);
 
   useEffect(() => {
     const timerID = setInterval(() => tick(), 1000);
@@ -16,6 +19,22 @@ function Header() {
     };
   });
 
+  const setDarkMode = () => {
+    document.querySelector("body").setAttribute("data-theme", "dark");
+    localStorage.setItem("selectedTheme", "dark");
+  };
+  const setLightMode = () => {
+    document.querySelector("body").setAttribute("data-theme", "light");
+    localStorage.setItem("selectedTheme", "light");
+  };
+
+  const selectedTheme = localStorage.getItem("selectedTheme");
+  selectedTheme === "dark" ? setDarkMode() : setLightMode();
+
+  const toggleTheme = (e) => {
+    e.target.checked ? setDarkMode() : setLightMode();
+    setIsOn(!isOn);
+  };
   function tick() {
     setCurrentTime(new Date());
   }
@@ -69,7 +88,25 @@ function Header() {
           <div className={style.profileLang}>
             <p>EN</p>
           </div>
-          <img src={SunIcon} alt="" />
+
+          <div
+            className={
+              isOn ? `${style.switch}` : `${style.switch} ${style.switchActive}`
+            }
+            onClick={() => document.querySelector("#checker").click()}
+          >
+            <div className={style.handle}></div>
+          </div>
+          <input
+            type="checkbox"
+            id="checker"
+            onChange={toggleTheme}
+            style={{
+              visibility: "hidden",
+              userSelect: "none",
+              position: "absolute",
+            }}
+          />
           <div className={style.profile}>
             <Link to="/profile">
               <div className={style.profileIcon}>

@@ -1,10 +1,11 @@
+@import "./darkMode/darkModeColor.scss";
 html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  background-color: #f5f5f5;
+  background-color: var(--color4);
 }
 ::-webkit-scrollbar {
   width: 5px;

@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap");
+@import "../../darkMode/darkModeColor.scss";
+
 header {
   width: 100%;
   height: 70px;
-  background-color: white;
+  background-color: var(--color1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +31,7 @@ header {
       }
 
       h1 {
-        color: white;
+        color: #fff;
         padding-top: 10px;
         font-weight: 400;
         letter-spacing: 1px;
@@ -72,6 +74,9 @@ header {
     justify-content: center;
     align-items: center;
     gap: 15px;
+    p {
+      color: var(--color3);
+    }
     img {
       &:hover {
         cursor: pointer;
@@ -82,14 +87,16 @@ header {
       justify-content: center;
       align-items: center;
       gap: 15px;
-
+      p {
+        color: var(--color3);
+      }
       .profileIcon {
         width: 40px;
         height: 40px;
         border-radius: 50%;
         display: flex;
         justify-content: center;
-        border: 1px solid #48a651;
+        border: 1px solid var(--color2);
         &:hover {
           cursor: pointer;
         }
@@ -102,10 +109,33 @@ header {
   }
 }
 .profileLang {
-  color: black;
+  color: var(--color3);
   text-decoration: underline;
-  text-decoration-color: #48a651;
+  text-decoration-color: var(--color2);
   font-size: 16px;
 
   font-family: "ABeeZee", sans-serif;
+}
+
+.switch {
+  width: 35px;
+  height: 20px;
+  background-color: rgba(19, 18, 18, 0.4);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 50px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.switchActive {
+  justify-content: flex-end;
+}
+
+.handle {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 40px;
 }

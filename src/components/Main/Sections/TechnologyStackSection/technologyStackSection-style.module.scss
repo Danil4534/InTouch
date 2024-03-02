@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
-
+@import "../../../../darkMode/darkModeColor.scss";
 .header {
   margin: 90px 0 50px 0;
   width: 100%;
@@ -8,6 +8,7 @@
   align-items: center;
   font-family: "ABeeZee", sans-serif;
   user-select: none;
+  color: var(--color3);
 }
 .infinitySlider {
   white-space: nowrap;
@@ -24,7 +25,7 @@
   width: 20px;
   height: 100%;
   content: " ";
-  background: linear-gradient(270deg, transparent 0%, #f5f5f5 65%);
+  background: linear-gradient(270deg, transparent 0%, var(--color4) 65%);
   z-index: 2;
 }
 .infinitySlider::after {
@@ -34,7 +35,7 @@
   width: 50px;
   height: 110%;
   content: " ";
-  background: linear-gradient(90deg, transparent 0%, #f5f5f5 65%);
+  background: linear-gradient(90deg, transparent 0%, var(--color4) 65%);
   z-index: 2;
 }
 .slide {
@@ -50,13 +51,13 @@
     width: 300px;
     height: 80px;
     border-radius: 19px;
-    background-color: #d9d9d9;
+    background-color: var(--color16);
     box-shadow: 0px 4px 4px #4caf50;
     user-select: none;
     span {
       font-size: 24px;
       font-family: "ABeeZee", sans-serif;
-      color: grey;
+      color: var(--color9);
     }
     img {
       padding: 0 20px;
@@ -90,12 +91,12 @@
       width: 300px;
       height: 80px;
       border-radius: 19px;
-      background-color: #d9d9d9;
+      background-color: var(--color16);
       box-shadow: 0px 4px 4px #4caf50;
       span {
         font-size: 24px;
         font-family: "ABeeZee", sans-serif;
-        color: grey;
+        color: var(--color9);
       }
     }
   }

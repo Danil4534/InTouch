@@ -1,3 +1,5 @@
+@import "../../darkMode/darkModeColor.scss";
+
 * {
   user-select: none;
 }
@@ -8,7 +10,7 @@
   margin-top: 20px;
   h1 {
     height: 121px;
-    color: white;
+    color: #fff;
     font-weight: 400;
     font-size: 100px;
     font-family: "Kalam", cursive;
@@ -52,7 +54,7 @@
   align-items: center;
   width: 100%;
   height: 300px;
-  background-color: #48a651;
+  background-color: var(--color2);
   .footerTextContent {
     display: flex;
     justify-content: space-between;
@@ -71,7 +73,7 @@
     align-items: center;
     width: 100%;
     height: 300px;
-    background-color: #48a651;
+    background-color: var(--color2);
     .footerTextContent {
       display: flex;
       justify-content: space-between;
@@ -96,7 +98,7 @@
   }
   p {
     font-size: 20px;
-    color: white;
+    color: #fff;
   }
   .item {
     img {

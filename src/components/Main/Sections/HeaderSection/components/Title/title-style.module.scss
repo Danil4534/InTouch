@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=K2D:wght@700&display=swap");
+@import "../../../../../../darkMode/darkModeColor.scss";
+
 .Title {
   font-size: 80px;
   font-family: "K2D", cursive;
   font-weight: 900;
   font-style: bold;
-  text-shadow: 0px 1px 2px black;
+  text-shadow: 0px 1px 2px var(--color3);
   letter-spacing: 1px;
   user-select: none;
+  color: var(--color3);
 }

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
-
+@import "../../../../darkMode/darkModeColor.scss";
 .header {
   margin-top: 50px;
   display: flex;
@@ -7,6 +7,7 @@
   align-items: center;
   h1 {
     user-select: none;
+    color: var(--color3);
     text-transform: uppercase;
   }
 }
@@ -36,7 +37,7 @@
     left: -150px;
     p {
       font-size: 26px;
-      color: white;
+      color: #fff;
       text-transform: uppercase;
       user-select: none;
     }
@@ -51,7 +52,7 @@
     left: 150px;
     p {
       font-size: 26px;
-      color: white;
+      color: #fff;
       text-transform: uppercase;
       user-select: none;
     }
@@ -78,6 +79,7 @@
     p {
       position: absolute;
       bottom: -20px;
+      color: var(--color3);
       text-transform: uppercase;
       user-select: none;
     }
@@ -215,174 +217,3 @@
     left: 20px;
   }
 }
-
-// First Template
-// @keyframes idea {
-//   0% {
-//     top: -140px;
-//     left: -250px;
-//   }
-//   100% {
-//     top: -140px;
-//     left: 0;
-//   }
-// }
-// @keyframes classroom {
-//   0% {
-//     top: -140px;
-//     left: -300px;
-//   }
-
-//   100% {
-//     top: -140px;
-//   }
-// }
-// @keyframes course {
-//   0% {
-//     top: -140px;
-//     left: -300px;
-//   }
-//   100% {
-//     top: -140px;
-//   }
-// }
-
-// @keyframes members {
-//   0% {
-//     top: -140px;
-//     left: 200px;
-//   }
-//   10% {
-//     top: -140px;
-//     left: 500px;
-//   }
-//   20% {
-//     top: -100px;
-//     left: 500px;
-//   }
-//   30% {
-//     top: -60px;
-//     left: 500px;
-//   }
-//   40% {
-//     top: -40px;
-//     left: 500px;
-//   }
-//   50% {
-//     top: -40px;
-//     left: 200px;
-//   }
-//   60% {
-//     top: -40px;
-//     left: -650px;
-//   }
-//   70% {
-//     top: 60px;
-//     left: -650px;
-//   }
-
-//   80% {
-//     top: 100px;
-//     left: -650px;
-//   }
-//   90% {
-//     top: 130px;
-//   }
-//   100% {
-//     top: 130px;
-//     left: -300px;
-//   }
-// }
-// @keyframes chat {
-//   0% {
-//     top: -140px;
-//     left: 200px;
-//   }
-//   10% {
-//     top: -140px;
-//     left: 400px;
-//   }
-//   20% {
-//     top: -100px;
-//     left: 400px;
-//   }
-//   30% {
-//     top: -60px;
-//     left: 400px;
-//   }
-//   40% {
-//     top: -40px;
-//     left: 400px;
-//   }
-//   50% {
-//     top: -40px;
-//     left: 100px;
-//   }
-//   60% {
-//     top: -40px;
-//     left: -750px;
-//   }
-//   70% {
-//     top: 60px;
-//     left: -750px;
-//   }
-
-//   80% {
-//     top: 100px;
-//     left: -750px;
-//   }
-//   90% {
-//     top: 130px;
-//   }
-//   100% {
-//     top: 130px;
-//     left: -150px;
-//   }
-// }
-
-// @keyframes calendar {
-//   0% {
-//     top: -140px;
-//     left: 200px;
-//   }
-//   10% {
-//     top: -140px;
-//     left: 300px;
-//   }
-//   20% {
-//     top: -100px;
-//     left: 300px;
-//   }
-//   30% {
-//     top: -60px;
-//     left: 300px;
-//   }
-//   40% {
-//     top: -40px;
-//     left: 300px;
-//   }
-//   50% {
-//     top: -40px;
-//     left: 100px;
-//   }
-//   60% {
-//     top: -40px;
-//     left: -850px;
-//   }
-//   70% {
-//     top: 60px;
-//     left: -850px;
-//   }
-
-//   80% {
-//     top: 100px;
-//     left: -850px;
-//   }
-//   90% {
-//     top: 130px;
-//   }
-//   100% {
-//     top: 130px;
-//     left: 20px;
-//   }
-// }
