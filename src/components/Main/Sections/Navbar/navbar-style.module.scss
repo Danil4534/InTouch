@@ -46,3 +46,54 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .navbarWrapper {
+    position: fixed;
+    z-index: 999;
+    display: none;
+  }
+  .navbarBody {
+    width: 80px;
+
+    position: relative;
+    top: 0;
+    z-index: 999;
+    padding-top: 70px;
+    height: 100vh;
+    background-color: var(--color1);
+    .navbarBtns {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      align-items: center;
+      height: 100%;
+      position: relative;
+
+      button {
+        width: 50px;
+        height: 35px;
+        background-color: var(--color4);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+          transition: 0.2s ease-in-out;
+          background-color: var(--color2);
+        }
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      .btnActive {
+        background-color: var(--color2);
+      }
+      .navbarSettingsBtn {
+        position: absolute;
+        bottom: 20px;
+      }
+    }
+  }
+}

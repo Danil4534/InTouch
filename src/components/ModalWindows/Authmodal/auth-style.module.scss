@@ -86,8 +86,9 @@
     h1 {
       font-family: "ABeeZee", sans-serif;
       font-size: 34px;
+      color: #3a703f;
     }
-    color: var(--color17);
+    color: #3a703f;
   }
 }
 .btnClose {
@@ -127,7 +128,7 @@
     padding: 0 0 0 10px;
     user-select: none;
     color: var(--color3);
-    cursor: pointer;
+    // cursor: pointer;
   }
   input: {
     background-color: var(--color3);
@@ -140,7 +141,7 @@
     transition: 0.5s;
     font-family: "ABeeZee", sans-serif;
     color: var(--color2);
-    cursor: pointer;
+    // cursor: pointer;
   }
   input:focus ~ label {
     transition: 0.5s;
@@ -208,6 +209,7 @@
   display: flex;
   align-items: center;
   p {
+    padding: 5px;
     color: var(--color2);
   }
 }

@@ -18,11 +18,7 @@ function Header() {
   });
   useEffect(() => {
     const selectedTheme = localStorage.getItem("selectedTheme");
-    if (selectedTheme === "dark") {
-      setDarkMode();
-    } else {
-      setLightMode();
-    }
+    selectedTheme === "dark" ? setDarkMode() : setLightMode();
   }, []);
   const setDarkMode = () => {
     document.querySelector("body").setAttribute("data-theme", "dark");

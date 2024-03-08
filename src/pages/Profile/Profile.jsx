@@ -5,69 +5,9 @@ import PencilIcon from "./../../assets/svg/Pencil.svg";
 import FollowresIcon from "./../../assets/svg/Followers.svg";
 import CoursesIcon from "./../../assets/svg/Courses.svg";
 import TasksIcon from "./../../assets/svg/Tasks1.svg";
+import useStore from "../../store/useStore";
 function Profile() {
-  const activeCourses = [
-    {
-      id: 1,
-      persent: 67,
-      name: "Брендинг та PR",
-      status: "Active",
-    },
-    {
-      id: 2,
-      persent: 30,
-      name: "Database development та трьохланкові...",
-      status: "Active",
-    },
-    {
-      id: 3,
-      persent: 45,
-      name: "Комп’ютерні мережі",
-      status: "Active",
-    },
-    {
-      id: 4,
-      persent: 67,
-      name: "Професіна практика програмної інжене... ",
-      status: "Active",
-    },
-    {
-      id: 5,
-      persent: 100,
-      name: "Розробка адаптивних web-інтерфейсів...",
-      status: "Active",
-    },
-    {
-      id: 6,
-      persent: 63,
-      name: "Якість програмного забезпечення т...",
-      status: "Active",
-    },
-    {
-      id: 7,
-      persent: 23,
-      name: "Іноземна мова",
-      status: "Active",
-    },
-    {
-      id: 8,
-      persent: 65,
-      name: "Брендинг та PR",
-      status: "Active",
-    },
-    {
-      id: 9,
-      persent: 23,
-      name: "Брендинг та PR",
-      status: "Active",
-    },
-    {
-      id: 10,
-      persent: 76,
-      name: "Брендинг та PR",
-      status: "Active",
-    },
-  ];
+  const { activeCourses } = useStore();
 
   return (
     <>
@@ -102,10 +42,10 @@ function Profile() {
                 <h4>Email</h4>
                 <p>test@gmail.com</p>
               </div>
-              <div>
+              {/* <div>
                 <h4>Number</h4>
                 <p>+380***********</p>
-              </div>
+              </div> */}
             </div>
             <div className={style.BtnFollow}>
               <button>Follow</button>
@@ -144,7 +84,7 @@ function Profile() {
               <div className={style.activeCourseContent}>
                 {activeCourses.map((activeCoursesItem, index) => (
                   <div className={style.activeItem} key={index}>
-                    <p>{activeCoursesItem.persent}% </p>
+                    <p>{activeCoursesItem.percent}% </p>
                     <div className={style.course}>
                       <p>{activeCoursesItem.name}</p>
 

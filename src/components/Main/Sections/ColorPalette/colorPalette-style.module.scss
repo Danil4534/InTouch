@@ -145,3 +145,150 @@
     }
   }
 }
+@media (max-width: 480px) {
+  .main {
+    display: none;
+    width: 39%;
+    background-color: var(--color1);
+    border-radius: 34px;
+    padding: 42px 26px;
+    h1 {
+      font-size: 26px;
+      color: var(--color3);
+      font-family: "ABeeZee", sans-serif;
+      padding-bottom: 23px;
+      text-transform: uppercase;
+      font-weight: 200;
+    }
+    .bodyLine {
+      width: 100%;
+      height: 4px;
+      background-color: var(--color4);
+      border-radius: 10px;
+    }
+    .bodyColorPaletteCircles {
+      width: 100%;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 5px;
+      grid-row-gap: 10px;
+      justify-items: center;
+      align-items: center;
+      padding-top: 10px;
+    }
+    @media (max-width: 1800px) {
+      .bodyColorPaletteCircles {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 10px;
+        justify-items: center;
+        align-items: center;
+
+        padding-top: 10px;
+      }
+    }
+    @media (max-width: 1430px) {
+      .main {
+        padding: 0;
+      }
+      .bodyColorPaletteCircles {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 10px;
+        justify-items: center;
+        align-items: center;
+        padding-top: 10px;
+      }
+    }
+    .bodyColorPaletteCircles > div {
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    @keyframes animColor {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .bodyColorPaletteCircles > div > p {
+      color: var(--color1);
+      position: absolute;
+      bottom: 2px;
+      left: 10px;
+    }
+
+    .bodyColorPaletteCircles > div:nth-child(1) {
+      background-color: var(--color2);
+      animation: animColor 0.1s linear;
+    }
+    .bodyColorPaletteCircles > div:nth-child(2) {
+      background-color: var(--color5);
+      animation: animColor 0.2s linear;
+    }
+    .bodyColorPaletteCircles > div:nth-child(3) {
+      background-color: var(--color6);
+      animation: animColor 0.3s linear;
+    }
+    .bodyColorPaletteCircles > div:nth-child(4) {
+      background-color: var(--color7);
+      animation: animColor 0.4s linear;
+      p {
+        color: var(--color3);
+      }
+    }
+    .bodyColorPaletteCircles > div:nth-child(5) {
+      animation: animColor 0.5s linear;
+      background-color: var(--color8);
+    }
+    .bodyColorPaletteCircles > div:nth-child(6) {
+      animation: animColor 0.6s linear;
+      background-color: var(--color6);
+    }
+    .bodyColorPaletteCircles > div:nth-child(7) {
+      animation: animColor 0.7s linear;
+      background-color: var(--color6);
+    }
+    .bodyColorPaletteCircles > div:nth-child(8) {
+      animation: animColor 0.8s linear;
+      background-color: var(--color6);
+    }
+    .bodyColorPaletteCircles > div:nth-child(9) {
+      animation: animColor 0.9s linear;
+      background-color: var(--color3);
+    }
+    .bodyColorPaletteCircles > div:nth-child(10) {
+      animation: animColor 1s linear;
+      background-color: var(--color9);
+    }
+    .bodyColorPaletteCircles > div:nth-child(11) {
+      animation: animColor 1.1s linear;
+      background-color: var(--color4);
+      p {
+        color: var(--color3);
+      }
+    }
+    .bodyColorPaletteCircles > div:nth-child(12) {
+      animation: animColor 1.2s linear;
+      background-color: #fff;
+      p {
+        color: #000;
+      }
+    }
+  }
+}

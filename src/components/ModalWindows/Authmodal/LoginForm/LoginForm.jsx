@@ -43,6 +43,7 @@ function LoginForm() {
             <input
               type="email"
               name="email"
+              id="email"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
@@ -54,6 +55,7 @@ function LoginForm() {
                   ? `${style.inputerrorlabel}`
                   : null
               }
+              htmlFor="email"
             >
               Email
             </label>
@@ -74,6 +76,7 @@ function LoginForm() {
             <input
               type="password"
               name="password"
+              id="password"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.password}
@@ -85,6 +88,7 @@ function LoginForm() {
                   ? `${style.inputerrorlabel}`
                   : null
               }
+              htmlFor="password"
             >
               Password
             </label>
