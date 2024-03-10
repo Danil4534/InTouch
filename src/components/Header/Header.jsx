@@ -10,23 +10,21 @@ import { Link } from "react-router-dom";
 function Header() {
   const [currentTime, setCurrentTime] = useState(new Date());
 
-  useEffect(() => {
-    const timerID = setInterval(() => tick(), 0);
-    return function cleanup() {
-      clearInterval(timerID);
-    };
-  });
+  //DarkMode start ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   useEffect(() => {
     const selectedTheme = localStorage.getItem("selectedTheme");
     selectedTheme === "dark" ? setDarkMode() : setLightMode();
   }, []);
+
   const setDarkMode = () => {
     document.querySelector("body").setAttribute("data-theme", "dark");
     localStorage.setItem("selectedTheme", "dark");
+    // document.querySelector("#checker").checked = true;
   };
   const setLightMode = () => {
     document.querySelector("body").setAttribute("data-theme", "light");
     localStorage.setItem("selectedTheme", "light");
+    // document.querySelector("#checker").checked = false;
   };
 
   const selectedTheme = localStorage.getItem("selectedTheme");
@@ -34,15 +32,23 @@ function Header() {
 
   const toggleTheme = (e) => {
     if (e.target.checked) {
-      setLightMode();
-    } else {
       setDarkMode();
+    } else {
+      setLightMode();
     }
   };
+  //DarkMode  end ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  //Header Date Time start ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  useEffect(() => {
+    const timerID = setInterval(() => tick(), 0);
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
   function tick() {
     setCurrentTime(new Date());
   }
-
   const day = currentTime.getDate();
   const dayOfWeek = currentTime.getDay();
   const month = currentTime.getMonth();
@@ -72,9 +78,11 @@ function Header() {
     "Saturday",
     "Sunday",
   ];
+
   const formatedDate = `${day}  ${months[month]} ${year} ${
-    week[dayOfWeek - 1]
+    dayOfWeek === 0 ? week[6] : week[dayOfWeek - 1]
   }`;
+  //Header Date Time End ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   return (
     <>
@@ -107,11 +115,13 @@ function Header() {
             type="checkbox"
             id="checker"
             onChange={toggleTheme}
-            style={{
-              visibility: "hidden",
-              userSelect: "none",
-              position: "absolute",
-            }}
+            style={
+              {
+                // visibility: "hidden",
+                // userSelect: "none",
+                // position: "absolute",
+              }
+            }
           />
           <div className={style.profile}>
             <Link to="/profile">
