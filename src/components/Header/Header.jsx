@@ -115,13 +115,11 @@ function Header() {
             type="checkbox"
             id="checker"
             onChange={toggleTheme}
-            style={
-              {
-                // visibility: "hidden",
-                // userSelect: "none",
-                // position: "absolute",
-              }
-            }
+            style={{
+              visibility: "hidden",
+              userSelect: "none",
+              position: "absolute",
+            }}
           />
           <div className={style.profile}>
             <Link to="/profile">

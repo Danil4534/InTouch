@@ -12,7 +12,7 @@ import GitHub from "../../assets/svg/GitHub.svg";
 import Mail from "../../assets/svg/Gmail Logo.svg";
 function Footer() {
   return (
-    <>
+    <footer>
       <div className={style.Logo}>
         <img src={YodaIcon} alt="" />
         <h1>nTouch</h1>
@@ -96,7 +96,7 @@ function Footer() {
           </div>
         </div>
       </div>
-    </>
+    </footer>
   );
 }
 

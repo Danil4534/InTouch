@@ -5,7 +5,7 @@ import useStore from "../../../../../../store/useStore";
 const BtnLogin = () => {
   const { authModalState, setAuthModalActive } = useStore();
   return (
-    <div>
+    <div className={style.BtnLoginHeader}>
       <button className={style.btn} onClick={() => setAuthModalActive()}>
         Login
       </button>

@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./circles-style.module.scss";
 import ImgMacBook from "../../../../../../assets/img/Macbook Pro 17.png";
+
 import AlinaPhoto from "../../../../../../assets/img/AlinaPhoto.svg";
 import YarikPhoto from "../../../../../../assets/img/YarikPhoto.svg";
 import AndreyPhoto from "../../../../../../assets/img/AndreyPhoto.svg";
@@ -30,6 +31,7 @@ function Circles() {
             <p>Front-end</p>
           </div>
         </div>
+
         <img src={ImgMacBook} alt="" />
       </div>
     </>

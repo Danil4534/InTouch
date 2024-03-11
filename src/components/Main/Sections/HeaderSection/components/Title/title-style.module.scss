@@ -11,3 +11,18 @@
   user-select: none;
   color: var(--color3);
 }
+
+@media (max-width: 430px) {
+  .Title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    font-family: "K2D", cursive;
+    font-weight: 900;
+    text-shadow: 0px 1px 2px var(--color3);
+    letter-spacing: 1px;
+    user-select: none;
+    color: var(--color3);
+  }
+}
