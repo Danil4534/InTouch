@@ -1,6 +1,7 @@
 @import "../../darkMode/darkModeColor.scss";
 .btnScroll {
-  a {
+  z-index: 997;
+  button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +10,7 @@
     bottom: 20px;
     width: 40px;
     height: 40px;
-    background-color: transparent;
+    background-color: white;
     border-radius: 50%;
     border: 2px solid var(--color6);
     transition: 0.3s ease-in-out;
@@ -17,6 +18,32 @@
     img {
       width: 40px;
       height: 40px;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .btnScroll {
+    position: relative;
+    z-index: 997;
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      right: 20px;
+      bottom: 100px;
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      border-radius: 50%;
+      border: 2px solid var(--color6);
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+      img {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 }

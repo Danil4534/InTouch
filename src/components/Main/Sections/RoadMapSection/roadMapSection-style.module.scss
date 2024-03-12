@@ -222,13 +222,10 @@
   .main {
     width: 100%;
     height: 100%;
-    // display: none;
   }
   .header {
-    // display: none;
     margin-top: 20px;
-    // justify-content: center;
-    // align-items: center;
+
     h1 {
       user-select: none;
       color: var(--color3);
@@ -288,7 +285,7 @@
       justify-content: space-between;
       align-items: center;
       position: static;
-      // position: relative;
+
       .itemBackground {
         display: flex;
         justify-content: center;
@@ -314,10 +311,10 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    // align-items: center;
+
     flex-direction: column;
     gap: 20px;
-    // position: relative;
+
     background-repeat: no-repeat;
     background-position: center;
     background-image: url("../../../../assets/svg/Vector\ 2.svg");
@@ -329,7 +326,7 @@
     left: 250px;
   }
   .itemIdeaActive {
-    animation: none;
+    animation: chat 1s ease-in-out;
   }
   .itemClassroom {
     position: static;
@@ -353,7 +350,7 @@
     position: static;
   }
   .itemChatsActive {
-    animation: none;
+    animation: chat 1s ease-in-out;
   }
   .itemCalendar {
     position: absolute;
@@ -362,14 +359,6 @@
   }
   .itemCalendarActive {
     animation: none;
-  }
-  @media (min-width: 1440px) {
-    .body {
-      margin-top: 20px;
-      transform: scale(1.1);
-      position: relative;
-      z-index: -1;
-    }
   }
 
   @keyframes idea {
