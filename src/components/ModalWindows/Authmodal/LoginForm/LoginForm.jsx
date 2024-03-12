@@ -7,6 +7,7 @@ import EmailIcon from "../../../../assets/svg/emailIcon.svg";
 import useStore from "../../../../store/useStore";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import Notification from "../../Notification/Notification";
 function LoginForm() {
   const { loginFormActive, setSwapLoginRegister } = useStore();
   const formik = useFormik({
@@ -105,7 +106,8 @@ function LoginForm() {
             ) : null}
           </div>
           <div className={style.formBtn}>
-            <button type="Submit">Log in</button>
+            {/* <button type="Submit">Log in</button> */}
+            <Notification />
           </div>
           <div className={style.formOR}>
             <hr />

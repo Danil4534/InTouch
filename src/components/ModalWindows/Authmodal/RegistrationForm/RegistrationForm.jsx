@@ -7,6 +7,7 @@ import LockIcon from "../../../../assets/svg/LockIcon.svg";
 import EmailIcon from "../../../../assets/svg/emailIcon.svg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import Notification from "../../Notification/Notification";
 function RegistrationForm() {
   const { registerFormActive, setSwapRegisterLogin } = useStore();
   const formik = useFormik({
@@ -145,7 +146,8 @@ function RegistrationForm() {
             ) : null}
           </div>
           <div className={style.formBtn}>
-            <button type="Submit">Register</button>
+            <Notification />
+            {/* <button type="Submit">Register</button> */}
           </div>
 
           <div className={style.googleBtn}>

@@ -19,3 +19,17 @@ body {
 body.modal-open {
   overflow: hidden;
 }
+.ant-space-item {
+  width: 100%;
+}
+.css-dev-only-do-not-override-1ae8k9u {
+  width: 100%;
+  /* background-color: var(--color10); */
+}
+:where(.css-dev-only-do-not-override-1ae8k9u).ant-btn-default:not(
+    :disabled
+  ):not(.ant-btn-disabled):hover {
+  color: var(--color10);
+  border: 2px solid var(--color10);
+  background: transparent;
+}

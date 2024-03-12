@@ -11,8 +11,8 @@ import Footer from "../Footer/Footer";
 import RoadMapSection from "./Sections/RoadMapSection/RoadMapSection";
 
 import AuthModal from "../ModalWindows/Authmodal/AuthModal";
+
 function Main() {
-  // const [authModalActive, setAuthModalActive] = useState(false);
   return (
     <div className={style.main}>
       <HeaderSection />
@@ -22,8 +22,9 @@ function Main() {
         <AboutUs />
         <ColorPalette />
       </div>
+
       <News />
-      <div className={style.mainBackgound}>{/* <BackCircle /> */}</div>
+      <div className={style.mainBackgound}></div>
       <Footer />
       <AuthModal />
     </div>
