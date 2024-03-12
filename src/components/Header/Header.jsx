@@ -112,6 +112,7 @@ function Header() {
             <div className={style.handle}></div>
           </div>
           <input
+            checked={localStorage.getItem("selectedTheme") === "dark"}
             type="checkbox"
             id="checker"
             onChange={toggleTheme}

@@ -41,7 +41,9 @@ function Footer() {
                 </a>
               </div>
               <div className={style.item}>
-                <img src={telegram} alt="" />
+                <a href="https://t.me/Clemsonn">
+                  <img src={telegram} alt="" />
+                </a>
               </div>
             </div>
           </div>
@@ -60,7 +62,9 @@ function Footer() {
                 </a>
               </div>
               <div className={style.item}>
-                <img src={telegram} alt="" />
+                <a href="https://t.me/NEGAv1">
+                  <img src={telegram} alt="" />
+                </a>
               </div>
             </div>
           </div>
@@ -79,7 +83,9 @@ function Footer() {
                 </a>
               </div>
               <div className={style.item}>
-                <img src={telegram} alt="" />
+                <a href="https://t.me/SmilingKnight_1">
+                  <img src={telegram} alt="" />
+                </a>
               </div>
             </div>
           </div>
@@ -100,7 +106,9 @@ function Footer() {
                 </a>
               </div>
               <div className={style.item}>
-                <img src={telegram} alt="" />
+                <a href="https://t.me/Dan122342">
+                  <img src={telegram} alt="" />
+                </a>
               </div>
             </div>
           </div>
