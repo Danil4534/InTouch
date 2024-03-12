@@ -1,0 +1,22 @@
+@import "../../darkMode/darkModeColor.scss";
+.btnScroll {
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid var(--color6);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

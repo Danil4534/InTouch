@@ -11,6 +11,7 @@ import Footer from "../Footer/Footer";
 import RoadMapSection from "./Sections/RoadMapSection/RoadMapSection";
 
 import AuthModal from "../ModalWindows/Authmodal/AuthModal";
+import ScrollUp from "../ScrollUp/ScrollUp";
 
 function Main() {
   return (
@@ -22,11 +23,11 @@ function Main() {
         <AboutUs />
         <ColorPalette />
       </div>
-
       <News />
       <div className={style.mainBackgound}></div>
       <Footer />
       <AuthModal />
+      <ScrollUp />
     </div>
   );
 }
