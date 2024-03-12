@@ -36,7 +36,9 @@ function Footer() {
                 <img src={Mail} alt="" />
               </div>
               <div className={style.item}>
-                <img src={GitHub} alt="" />
+                <a href="https://github.com/Yarik22">
+                  <img src={GitHub} alt="" />
+                </a>
               </div>
               <div className={style.item}>
                 <img src={telegram} alt="" />
@@ -53,7 +55,9 @@ function Footer() {
                 <img src={Mail} alt="" />
               </div>
               <div className={style.item}>
-                <img src={GitHub} alt="" />
+                <a href="https://github.com/NEGAvv">
+                  <img src={GitHub} alt="" />
+                </a>
               </div>
               <div className={style.item}>
                 <img src={telegram} alt="" />
@@ -70,7 +74,9 @@ function Footer() {
                 <img src={Mail} alt="" />
               </div>
               <div className={style.item}>
-                <img src={GitHub} alt="" />
+                <a href="https://github.com/stalker9855">
+                  <img src={GitHub} alt="" />
+                </a>
               </div>
               <div className={style.item}>
                 <img src={telegram} alt="" />
@@ -84,10 +90,14 @@ function Footer() {
             </div>
             <div className={style.socialLinks}>
               <div className={style.item}>
-                <img src={Mail} alt="" />
+                <a href="">
+                  <img src={Mail} alt="" />
+                </a>
               </div>
               <div className={style.item}>
-                <img src={GitHub} alt="" />
+                <a href="https://github.com/DanilTsapok">
+                  <img src={GitHub} alt="" />
+                </a>
               </div>
               <div className={style.item}>
                 <img src={telegram} alt="" />
