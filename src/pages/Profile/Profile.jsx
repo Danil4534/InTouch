@@ -8,7 +8,6 @@ import TasksIcon from "./../../assets/svg/Tasks1.svg";
 import useStore from "../../store/useStore";
 function Profile() {
   const { activeCourses } = useStore();
-
   return (
     <>
       <div className={style.profileMain}>
@@ -27,7 +26,7 @@ function Profile() {
             </div>
             <div className={style.profileNick}>
               <h1>User</h1>
-              <p>Nickname</p>
+              <p>Username</p>
             </div>
             <div className={style.profileStatus}>
               <div className={style.circle}></div>
@@ -42,10 +41,6 @@ function Profile() {
                 <h4>Email</h4>
                 <p>test@gmail.com</p>
               </div>
-              {/* <div>
-                <h4>Number</h4>
-                <p>+380***********</p>
-              </div> */}
             </div>
             <div className={style.BtnFollow}>
               <button>Follow</button>
@@ -86,12 +81,15 @@ function Profile() {
                   <div className={style.activeItem} key={index}>
                     <p>{activeCoursesItem.percent}% </p>
                     <div className={style.course}>
-                      <p>{activeCoursesItem.name}</p>
-
-                      <p className={style.ActiveStatus}>
-                        <p className={style.circle}></p>
-                        <p>{activeCoursesItem.status}</p>
+                      <p>
+                        {activeCoursesItem.name.length > 16
+                          ? activeCoursesItem.name.slice(0, 16) + "..."
+                          : activeCoursesItem.name}
                       </p>
+                      <div className={style.ActiveStatus}>
+                        <div className={style.circle}></div>
+                        <p>{activeCoursesItem.status}</p>
+                      </div>
                     </div>
                   </div>
                 ))}

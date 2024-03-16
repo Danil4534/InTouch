@@ -6,8 +6,7 @@ import CloseIcon from "./../../../assets/svg/Close.svg";
 import LoginForm from "./LoginForm/LoginForm";
 import RegistrationForm from "./RegistrationForm/RegistrationForm";
 function AuthModal() {
-  const { authModalState, setAuthModalDisActive, setSwapLoginRegister } =
-    useStore();
+  const { authModalState, setAuthModalDisActive } = useStore();
   useEffect(() => {
     if (authModalState) {
       document.getElementsByTagName("body")[0].classList.add("modal-open");
@@ -23,7 +22,6 @@ function AuthModal() {
           : `${style.authModal}`
       }
     >
-      <div className={style.blurBackground}></div>
       <div className={style.loginLogo}>
         <Logo />
       </div>

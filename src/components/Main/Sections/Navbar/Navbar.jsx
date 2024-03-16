@@ -7,7 +7,9 @@ import GroupIcon from "../../../../assets/svg/People Skin Type 7.svg";
 import MeetingIcon from "../../../../assets/svg/Headset.svg";
 import MessageIcon from "../../../../assets/svg/Letter.svg";
 import SettingsIcon from "../../../../assets/svg/Settings.svg";
+import useStore from "../../../../store/useStore";
 function Navbar() {
+  const { setSettingsModalActive } = useStore();
   return (
     <>
       <div className={style.navbarWrapper}>
@@ -18,12 +20,12 @@ function Navbar() {
                 <img src={HomeIcon} alt="" />
               </button>
             </Link>
-            <Link to="/test">
+            <Link to="/calendar">
               <button>
                 <img src={CalendarIcon} alt="" />
               </button>
             </Link>
-            <Link to="/test">
+            <Link to="/courses">
               <button>
                 <img src={GroupIcon} alt="" />
               </button>
@@ -39,11 +41,9 @@ function Navbar() {
               </button>
             </Link>
             <div className={style.navbarSettingsBtn}>
-              <Link to="/test">
-                <button>
-                  <img src={SettingsIcon} alt="" />
-                </button>
-              </Link>
+              <button onClick={() => setSettingsModalActive()}>
+                <img src={SettingsIcon} alt="" />
+              </button>
             </div>
           </div>
         </div>

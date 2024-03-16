@@ -12,6 +12,7 @@ import RoadMapSection from "./Sections/RoadMapSection/RoadMapSection";
 
 import AuthModal from "../ModalWindows/Authmodal/AuthModal";
 import ScrollUp from "../ScrollUp/ScrollUp";
+import Settings from "../ModalWindows/Settings/Settings";
 
 function Main() {
   return (
@@ -27,7 +28,6 @@ function Main() {
       <div className={style.mainBackgound}></div>
       <Footer />
       <AuthModal />
-      <ScrollUp />
     </div>
   );
 }

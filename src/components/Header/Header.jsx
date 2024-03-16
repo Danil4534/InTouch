@@ -6,6 +6,7 @@ import SunIcon from "../../assets/icons/Sun.svg";
 import useStore from "../../store/useStore";
 
 import { Link } from "react-router-dom";
+import SwitchDarkMode from "../SwitchDarkMode/switchDarkMode";
 
 function Header() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -100,8 +101,8 @@ function Header() {
           <div className={style.profileLang}>
             <p>EN</p>
           </div>
-
-          <div
+          <SwitchDarkMode />
+          {/* <div
             className={
               selectedTheme === "dark"
                 ? `${style.switch} ${style.switchActive}`
@@ -121,7 +122,7 @@ function Header() {
               userSelect: "none",
               position: "absolute",
             }}
-          />
+          /> */}
           <div className={style.profile}>
             <Link to="/profile">
               <div className={style.profileIcon}>

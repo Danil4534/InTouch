@@ -3,6 +3,7 @@ import { create } from "zustand";
 
 /**
  * Zustand hook for managing user authentication and active courses state.
+ *
  * @typedef {Object} User
  * @property {number} id - The unique identifier for the user.
  * @property {string} nick - The nickname of the user.
@@ -112,7 +113,10 @@ const useStore = create((set) => ({
   activeCourses: activeCourses,
   authModalState: false,
   loginFormActive: true,
+  settingsModalState: false,
   registerFormActive: false,
+  setSettingsModalActive: () => set({ settingsModalState: true }),
+  setSettingsModalDisActive: () => set({ settingsModalState: false }),
   setAuthModalActive: () => set({ authModalState: true }),
   setAuthModalDisActive: () => set({ authModalState: false }),
   setSwapLoginRegister: () =>
