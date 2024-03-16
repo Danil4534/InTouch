@@ -2,43 +2,49 @@ import React, { useEffect, useState } from "react";
 import style from "./header-style.module.scss";
 import LogoYoda from "../../assets/svg/Baby Yoda.svg";
 import ProfileIcon from "../../assets/svg/Profile.svg";
-import SunIcon from "../../assets/icons/Sun.svg";
-import useStore from "../../store/useStore";
-
 import { Link } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
 import SwitchDarkMode from "../SwitchDarkMode/switchDarkMode";
+import axios from "axios";
 
 function Header() {
   const [currentTime, setCurrentTime] = useState(new Date());
-
-  //DarkMode start ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  const [username, setUsername] = useState("");
   useEffect(() => {
-    const selectedTheme = localStorage.getItem("selectedTheme");
-    selectedTheme === "dark" ? setDarkMode() : setLightMode();
+    const fetchUserDetails = async () => {
+      const userId = getUserIdFromToken();
+      if (userId) {
+        try {
+          const response = await axios.get(
+            `http://127.0.0.1:8000/user/${userId}/`,
+            {
+              headers: {
+                Authorization: `Bearer ${getCookie("accessToken")}`,
+              },
+            }
+          );
+          setUsername(response.data.username);
+        } catch (e) {
+          console.error(e);
+        }
+      }
+    };
+    fetchUserDetails();
   }, []);
 
-  const setDarkMode = () => {
-    document.querySelector("body").setAttribute("data-theme", "dark");
-    localStorage.setItem("selectedTheme", "dark");
-    // document.querySelector("#checker").checked = true;
-  };
-  const setLightMode = () => {
-    document.querySelector("body").setAttribute("data-theme", "light");
-    localStorage.setItem("selectedTheme", "light");
-    // document.querySelector("#checker").checked = false;
-  };
-
-  const selectedTheme = localStorage.getItem("selectedTheme");
-  selectedTheme === "dark" ? setDarkMode() : setLightMode();
-
-  const toggleTheme = (e) => {
-    if (e.target.checked) {
-      setDarkMode();
-    } else {
-      setLightMode();
+  const getUserIdFromToken = () => {
+    const token = getCookie("accessToken");
+    console.log(token);
+    if (token) {
+      const decoded = jwtDecode(token);
+      return decoded.user_id;
     }
   };
-  //DarkMode  end ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  const getCookie = (name) => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(";").shift();
+  };
 
   //Header Date Time start ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   useEffect(() => {
@@ -102,27 +108,7 @@ function Header() {
             <p>EN</p>
           </div>
           <SwitchDarkMode />
-          {/* <div
-            className={
-              selectedTheme === "dark"
-                ? `${style.switch} ${style.switchActive}`
-                : `${style.switch} `
-            }
-            onClick={() => document.querySelector("#checker").click()}
-          >
-            <div className={style.handle}></div>
-          </div>
-          <input
-            checked={localStorage.getItem("selectedTheme") === "dark"}
-            type="checkbox"
-            id="checker"
-            onChange={toggleTheme}
-            style={{
-              visibility: "hidden",
-              userSelect: "none",
-              position: "absolute",
-            }}
-          /> */}
+
           <div className={style.profile}>
             <Link to="/profile">
               <div className={style.profileIcon}>
@@ -130,7 +116,7 @@ function Header() {
               </div>
             </Link>
             <div className={style.profileNickname}>
-              <p>Hi! user</p>
+              <p>Hi! {username || "Guest"}</p>
             </div>
             <p>{time}</p>
           </div>

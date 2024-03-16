@@ -7,6 +7,7 @@ import LockIcon from "../../../../assets/svg/LockIcon.svg";
 import EmailIcon from "../../../../assets/svg/emailIcon.svg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 import Notification from "../../Notification/Notification";
 function RegistrationForm() {
   const { registerFormActive, setSwapRegisterLogin } = useStore();
@@ -27,8 +28,15 @@ function RegistrationForm() {
     }),
     onSubmit: async (values) => {
       try {
-        console.log(values.email, values.password);
-      } catch (e) {}
+        const response = await axios.post("http://127.0.0.1:8000/auth/users/", {
+          email: values.email,
+          username: values.username,
+          password: values.newPassword,
+        });
+        window.location.reload();
+      } catch (e) {
+        console.log(e);
+      }
     },
   });
   return (

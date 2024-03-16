@@ -21,6 +21,16 @@ function LoginForm() {
     }),
     onSubmit: async (values) => {
       try {
+        const response = await axios.post("http://127.0.0.1:8000/auth/login/", {
+          username: values.username,
+          password: values.password,
+        });
+        const { access, refresh } = response.data;
+        document.cookie = `accessToken=${access}; path=/`;
+        axios.defaults.headers.common["Authorization"] = `Bearer ${access}`;
+
+        console.log("success");
+        window.location.reload();
       } catch (e) {}
     },
   });
