@@ -5,6 +5,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import { INITIAL_EVENTS, createEventId } from "./event-utils";
+
 import style from "./calendar.module.scss";
 export default function Calendar() {
   const [weekendsVisible, setWeekendsVisible] = useState(true);

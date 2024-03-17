@@ -11,6 +11,7 @@ function Header() {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [username, setUsername] = useState("");
   const [btnLogoutActive, setbtnLogoutActive] = useState(false);
+
   useEffect(() => {
     const fetchUserDetails = async () => {
       const userId = getUserIdFromToken();
@@ -58,11 +59,16 @@ function Header() {
 
   //Header Date Time start ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   useEffect(() => {
-    const timerID = setInterval(() => tick(), 0);
-    return function cleanup() {
-      clearInterval(timerID);
-    };
-  });
+    const intervalId = setInterval(() => {
+      setCurrentTime((prevTime) => (prevTime = new Date()));
+    }, 1000);
+    return () => clearInterval(intervalId);
+
+    // const timerID = setInterval(() => tick(), 1000);
+    // return function cleanup() {
+    //   clearInterval(timerID);
+    // };
+  }, []);
   function tick() {
     setCurrentTime(new Date());
   }

@@ -1,47 +1,47 @@
 import React, { useEffect } from "react";
 import style from "./switchDarkMode.module.scss";
+import useStore from "../../store/useStore";
 
 function SwitchDarkMode() {
+  const { isChecked, switchCheck } = useStore();
+  // console.log(isChecked);
   //DarkMode start ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   useEffect(() => {
-    const selectedTheme = localStorage.getItem("selectedTheme");
-    selectedTheme === "dark" ? setDarkMode() : setLightMode();
-  }, []);
+    isChecked ? setLightMode() : setDarkMode();
+  }, [isChecked]);
 
   const setDarkMode = () => {
+    // switchCheck();
     document.querySelector("body").setAttribute("data-theme", "dark");
     localStorage.setItem("selectedTheme", "dark");
   };
   const setLightMode = () => {
+    // switchCheck();
     document.querySelector("body").setAttribute("data-theme", "light");
     localStorage.setItem("selectedTheme", "light");
   };
 
-  const selectedTheme = localStorage.getItem("selectedTheme");
-  selectedTheme === "dark" ? setDarkMode() : setLightMode();
+  // const selectedTheme = localStorage.getItem("selectedTheme");
+  // selectedTheme === "dark" ? setDarkMode() : setLightMode();
 
   const toggleTheme = (e) => {
-    if (e.target.checked) {
-      setDarkMode();
-    } else {
-      setLightMode();
-    }
+    switchCheck();
   };
   //DarkMode  end ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   return (
     <div>
       <div
         className={
-          selectedTheme === "dark"
-            ? `${style.switch} ${style.switchActive}`
-            : `${style.switch} `
+          isChecked
+            ? `${style.switch} `
+            : `${style.switch} ${style.switchActive} `
         }
         onClick={() => document.querySelector("#checker").click()}
       >
         <div className={style.handle}></div>
       </div>
       <input
-        checked={localStorage.getItem("selectedTheme") === "dark"}
+        checked={isChecked}
         type="checkbox"
         id="checker"
         onChange={toggleTheme}
