@@ -28,11 +28,14 @@ function RegistrationForm() {
     }),
     onSubmit: async (values) => {
       try {
-        const response = await axios.post("http://127.0.0.1:8000/auth/users/", {
-          email: values.email,
-          username: values.username,
-          password: values.newPassword,
-        });
+        const response = await axios.post(
+          "http://127.0.0.1:8000/auth/register/",
+          {
+            email: values.email,
+            username: values.username,
+            password: values.newPassword,
+          }
+        );
         window.location.reload();
       } catch (e) {
         console.log(e);
@@ -154,8 +157,8 @@ function RegistrationForm() {
             ) : null}
           </div>
           <div className={style.formBtn}>
-            <Notification />
-            {/* <button type="Submit">Register</button> */}
+            {/* <Notification /> */}
+            <button type="Submit">Register</button>
           </div>
 
           <div className={style.googleBtn}>

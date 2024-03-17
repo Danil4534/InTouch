@@ -17,6 +17,7 @@ function Notification() {
       <Space>
         <Button
           className={style.formBtn}
+          type="submit"
           onClick={() => openNotificationWithIcon("success")}
         >
           {registerFormActive ? "Register" : "Login"}

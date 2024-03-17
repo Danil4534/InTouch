@@ -7,6 +7,20 @@ import SwitchDarkMode from "../../SwitchDarkMode/switchDarkMode";
 function Settings() {
   const { settingsModalState, setSettingsModalDisActive } = useStore();
   console.log(settingsModalState);
+  useEffect(() => {
+    const selectedTheme = localStorage.getItem("selectedTheme");
+    selectedTheme === "dark" ? setDarkMode() : setLightMode();
+  }, []);
+  const setDarkMode = () => {
+    document.querySelector("body").setAttribute("data-theme", "dark");
+    localStorage.setItem("selectedTheme", "dark");
+  };
+  const setLightMode = () => {
+    document.querySelector("body").setAttribute("data-theme", "light");
+    localStorage.setItem("selectedTheme", "light");
+  };
+  const selectedTheme = localStorage.getItem("selectedTheme");
+  selectedTheme === "dark" ? setDarkMode() : setLightMode();
 
   useEffect(() => {
     if (settingsModalState) {

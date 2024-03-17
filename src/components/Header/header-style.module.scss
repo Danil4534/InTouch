@@ -286,3 +286,23 @@ header {
     border-radius: 40px;
   }
 }
+.btn {
+  width: 90px;
+  background-color: var(--color2);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-family: "ABeeZee", sans-serif;
+  box-shadow: 0px 2px 5px var(--color9);
+  transition: 0.3s ease-in-out;
+  user-select: none;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+    color: var(--color10);
+    transition: 0.3s ease-in-out;
+    background-color: transparent;
+    border: 2px solid var(--color10);
+  }
+}

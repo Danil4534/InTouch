@@ -7,16 +7,17 @@ import EmailIcon from "../../../../assets/svg/emailIcon.svg";
 import useStore from "../../../../store/useStore";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 import Notification from "../../Notification/Notification";
 function LoginForm() {
   const { loginFormActive, setSwapLoginRegister } = useStore();
   const formik = useFormik({
     initialValues: {
-      email: "",
+      username: "",
       password: "",
     },
     validationSchema: Yup.object({
-      email: Yup.string().email("Invalid email").required("Input email"),
+      username: Yup.string().required("Input username"),
       password: Yup.string().required("Input password"),
     }),
     onSubmit: async (values) => {
@@ -31,7 +32,9 @@ function LoginForm() {
 
         console.log("success");
         window.location.reload();
-      } catch (e) {}
+      } catch (e) {
+        console.log(e);
+      }
     },
   });
   return (
@@ -52,25 +55,25 @@ function LoginForm() {
           <div className={style.emailSection}>
             <img src={EmailIcon} alt="" />
             <input
-              type="email"
-              name="email"
-              id="email"
+              type="text"
+              name="username"
+              id="username"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={formik.values.email}
+              value={formik.values.username}
             />
             <label
               className={
-                (formik.touched.email && formik.errors.email) ||
-                formik.values.email != ""
+                (formik.touched.username && formik.errors.username) ||
+                formik.values.username != ""
                   ? `${style.inputerrorlabel}`
                   : null
               }
-              htmlFor="email"
+              htmlFor="username"
             >
-              Email
+              Username
             </label>
-            {formik.touched.email && formik.errors.email ? (
+            {formik.touched.username && formik.errors.username ? (
               <p
                 style={{
                   color: "red",
@@ -78,7 +81,7 @@ function LoginForm() {
                   position: "relative",
                 }}
               >
-                {formik.errors.email}
+                {formik.errors.username}
               </p>
             ) : null}
           </div>

@@ -10,6 +10,7 @@ import axios from "axios";
 function Header() {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [username, setUsername] = useState("");
+  const [btnLogoutActive, setbtnLogoutActive] = useState(false);
   useEffect(() => {
     const fetchUserDetails = async () => {
       const userId = getUserIdFromToken();
@@ -24,6 +25,7 @@ function Header() {
             }
           );
           setUsername(response.data.username);
+          setbtnLogoutActive(true);
         } catch (e) {
           console.error(e);
         }
@@ -31,7 +33,15 @@ function Header() {
     };
     fetchUserDetails();
   }, []);
-
+  // const logoutUser = async () => {
+  //   try {
+  //     const response = await axios.post("http://127.0.0.1:8000/auth/logout/");
+  //     setbtnLogoutActive(false);
+  //     window.location.reload();
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+  // };
   const getUserIdFromToken = () => {
     const token = getCookie("accessToken");
     console.log(token);
@@ -86,7 +96,7 @@ function Header() {
     "Sunday",
   ];
 
-  const formatedDate = `${day}  ${months[month]} ${year} ${
+  const formatedDate = `${day} ${months[month]} ${year} ${
     dayOfWeek === 0 ? week[6] : week[dayOfWeek - 1]
   }`;
   //Header Date Time End ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -119,6 +129,13 @@ function Header() {
               <p>Hi! {username || "Guest"}</p>
             </div>
             <p>{time}</p>
+            <div>
+              {btnLogoutActive ? (
+                <button className={style.btn}>Logout</button>
+              ) : (
+                <></>
+              )}
+            </div>
           </div>
         </div>
       </header>
