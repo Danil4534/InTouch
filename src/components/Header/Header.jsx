@@ -6,9 +6,11 @@ import { Link } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import SwitchDarkMode from "../SwitchDarkMode/switchDarkMode";
 import axios from "axios";
+import useStore from "../../store/useStore";
 
 function Header() {
   const [currentTime, setCurrentTime] = useState(new Date());
+  const { setActiveBtnLogin, currentUser, setCurrentUser } = useStore();
   const [username, setUsername] = useState("");
   const [btnLogoutActive, setbtnLogoutActive] = useState(false);
 
@@ -17,16 +19,15 @@ function Header() {
       const userId = getUserIdFromToken();
       if (userId) {
         try {
-          const response = await axios.get(
-            `http://127.0.0.1:8000/user/${userId}/`,
-            {
-              headers: {
-                Authorization: `Bearer ${getCookie("accessToken")}`,
-              },
-            }
-          );
-          setUsername(response.data.username);
+          const response = await axios.get(`http://127.0.0.1:8000/auth/me/`, {
+            headers: {
+              Authorization: `Bearer ${getCookie("accessToken")}`,
+            },
+          });
+
+          setCurrentUser(response.data);
           setbtnLogoutActive(true);
+          setActiveBtnLogin();
         } catch (e) {
           console.error(e);
         }
@@ -34,15 +35,12 @@ function Header() {
     };
     fetchUserDetails();
   }, []);
-  // const logoutUser = async () => {
-  //   try {
-  //     const response = await axios.post("http://127.0.0.1:8000/auth/logout/");
-  //     setbtnLogoutActive(false);
-  //     window.location.reload();
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // };
+
+  const logoutUser = async () => {
+    document.cookie =
+      "accessToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    window.location.replace("/");
+  };
   const getUserIdFromToken = () => {
     const token = getCookie("accessToken");
     console.log(token);
@@ -126,18 +124,27 @@ function Header() {
           <SwitchDarkMode />
 
           <div className={style.profile}>
-            <Link to="/profile">
-              <div className={style.profileIcon}>
-                <img src={ProfileIcon} alt="" />
+            {currentUser ? (
+              <div className={style.profileItem}>
+                <Link to="/profile">
+                  <div className={style.profileIcon}>
+                    <img src={ProfileIcon} alt="" />
+                  </div>
+                </Link>
+                <div className={style.profileNickname}>
+                  <p>Hi! {currentUser.username || "Guest"}</p>
+                </div>
               </div>
-            </Link>
-            <div className={style.profileNickname}>
-              <p>Hi! {username || "Guest"}</p>
-            </div>
+            ) : (
+              <></>
+            )}
+
             <p>{time}</p>
             <div>
               {btnLogoutActive ? (
-                <button className={style.btn}>Logout</button>
+                <button className={style.btn} onClick={() => logoutUser()}>
+                  Logout
+                </button>
               ) : (
                 <></>
               )}

@@ -288,6 +288,7 @@ header {
 }
 .btn {
   width: 90px;
+  height: 40px;
   background-color: var(--color2);
   border: 2px solid transparent;
   border-radius: 10px;
@@ -305,4 +306,10 @@ header {
     background-color: transparent;
     border: 2px solid var(--color10);
   }
+}
+.profileItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }

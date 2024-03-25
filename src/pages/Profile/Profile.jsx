@@ -7,7 +7,7 @@ import CoursesIcon from "./../../assets/svg/Courses.svg";
 import TasksIcon from "./../../assets/svg/Tasks1.svg";
 import useStore from "../../store/useStore";
 function Profile() {
-  const { activeCourses } = useStore();
+  const { activeCourses, currentUser } = useStore();
   return (
     <>
       <div className={style.profileMain}>
@@ -26,7 +26,7 @@ function Profile() {
             </div>
             <div className={style.profileNick}>
               <h1>User</h1>
-              <p>Username</p>
+              <p>{currentUser.username}</p>
             </div>
             <div className={style.profileStatus}>
               <div className={style.circle}></div>
@@ -39,7 +39,7 @@ function Profile() {
               </div>
               <div>
                 <h4>Email</h4>
-                <p>test@gmail.com</p>
+                <p>{currentUser.email}</p>
               </div>
             </div>
             <div className={style.BtnFollow}>

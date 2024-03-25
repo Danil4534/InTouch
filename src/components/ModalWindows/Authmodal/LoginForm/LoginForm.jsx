@@ -119,8 +119,8 @@ function LoginForm() {
             ) : null}
           </div>
           <div className={style.formBtn}>
-            {/* <button type="Submit">Log in</button> */}
-            <Notification />
+            <button type="Submit">Log in</button>
+            {/* <Notification /> */}
           </div>
           <div className={style.formOR}>
             <hr />

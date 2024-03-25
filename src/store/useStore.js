@@ -109,6 +109,10 @@ const activeCourses = [
 ];
 
 const useStore = create((set) => ({
+  currentUser: "",
+  setCurrentUser: (user) => set({ currentUser: user }),
+  activeBtnLogin: true,
+  setActiveBtnLogin: () => set({ activeBtnLogin: false }),
   isChecked: localStorage.getItem("selectedTheme") === "light",
   switchCheck: () => set((state) => ({ isChecked: !state.isChecked })),
   users: usersState,
