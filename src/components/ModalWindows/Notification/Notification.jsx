@@ -3,12 +3,14 @@ import React from "react";
 import style from "./notification.module.scss";
 import useStore from "../../../store/useStore";
 function Notification() {
-  const { registerFormActive, setSwapRegisterLogin } = useStore();
+  const { registerFormActive, setSwapRegisterLogin, notificationState } =
+    useStore();
   const [api, contextHolder] = notification.useNotification();
+  console.log(notificationState);
   const openNotificationWithIcon = (type) => {
     api[type]({
-      message: "Success",
-      description: "Access",
+      message: `${notificationState.message}`,
+      description: `${notificationState.description}`,
     });
   };
   return (
@@ -17,8 +19,10 @@ function Notification() {
       <Space>
         <Button
           className={style.formBtn}
-          type="submit"
-          onClick={() => openNotificationWithIcon("success")}
+          onClick={() => {
+            document.querySelector("#btnAuthRegister").click();
+            openNotificationWithIcon(notificationState.status);
+          }}
         >
           {registerFormActive ? "Register" : "Login"}
         </Button>

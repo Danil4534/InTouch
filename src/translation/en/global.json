@@ -1,0 +1,28 @@
+{
+  "header": {
+    "YaroslavPopov": "Yaroslav Popov",
+    "AlinaKhudolii": "Alina Khudolii",
+    "AndreyEvseev": "Andrey Evseev",
+    "DanilTsapok": "DanilTsapok"
+  },
+  "aboutUs": {
+    "title": "About us",
+    "FirstParagraph": "Out team is made up of experienced professionals, each bringing unique skills and ideas to our work",
+    "SecondParagraph": "We value diversity and encourage collaboration to provide our clients with the most innovative and effective solutions",
+    "ThirdParagraph": "We are proud of our accomplishments and are committed to continued development and growth",
+    "FourthParagraph": "Our goal is to be the best at what we do and continue to make a positive contribution to society and technology"
+  },
+  "Settings": {
+    "title": "Settings",
+    "ChangeDarkMode": "Change Theme",
+    "ChangeLanguage": "Change Lang"
+  },
+  "RoadMap": {
+    "Idea": "idea",
+    "Course": "course",
+    "Tasks": "tasks",
+    "Members": "members",
+    "Chat": "chat",
+    "Calendar": "calendar"
+  }
+}

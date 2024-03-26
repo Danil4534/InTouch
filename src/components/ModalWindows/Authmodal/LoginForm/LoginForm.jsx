@@ -26,6 +26,7 @@ function LoginForm() {
           username: values.username,
           password: values.password,
         });
+        console.log(response);
         const { access, refresh } = response.data;
         document.cookie = `accessToken=${access}; path=/`;
         axios.defaults.headers.common["Authorization"] = `Bearer ${access}`;
@@ -119,8 +120,10 @@ function LoginForm() {
             ) : null}
           </div>
           <div className={style.formBtn}>
-            <button type="Submit">Log in</button>
-            {/* <Notification /> */}
+            <Notification />
+            <button type="Submit" id="btnAuth" style={{ visibility: "hidden" }}>
+              Log in
+            </button>
           </div>
           <div className={style.formOR}>
             <hr />

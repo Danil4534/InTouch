@@ -6,8 +6,10 @@ import Management from "../../../../assets/svg/Management.svg";
 import GoogleCalendar from "../../../../assets/svg/Google Calendar2.svg";
 import Tasks from "../../../../assets/svg/Tasks.svg";
 import Chats from "../../../../assets/svg/Chat.svg";
+import { useTranslation } from "react-i18next";
 
 function RoadMapSection() {
+  const [t, i18n] = useTranslation("global");
   const [isAnimated, setIsAnimated] = useState(false);
   const handleScroll = () => {
     const position = window.scrollY;
@@ -39,7 +41,7 @@ function RoadMapSection() {
               <div className={`${style.circle} ${style.itemBackground}`}>
                 <img src={Idea} alt="" />
               </div>
-              <p>Idea</p>
+              <p>{t("RoadMap.Idea")}</p>
             </div>
 
             <div
@@ -52,7 +54,7 @@ function RoadMapSection() {
               <div className={`${style.circle} ${style.itemBackground}`}>
                 <img src={Classroom} alt="" />
               </div>
-              <p>course</p>
+              <p>{t("RoadMap.Course")}</p>
             </div>
 
             <div
@@ -65,7 +67,7 @@ function RoadMapSection() {
               <div className={`${style.circle} ${style.itemBackground}`}>
                 <img src={Tasks} alt="" />
               </div>
-              <p>tasks</p>
+              <p>{t("RoadMap.Tasks")}</p>
             </div>
 
             <div
@@ -78,7 +80,7 @@ function RoadMapSection() {
               <div className={`${style.circle} ${style.itemBackground}`}>
                 <img src={Management} alt="" />
               </div>
-              <p>members</p>
+              <p>{t("RoadMap.Members")}</p>
             </div>
             <div
               className={
@@ -90,7 +92,7 @@ function RoadMapSection() {
               <div className={`${style.circle} ${style.itemBackground}`}>
                 <img src={Chats} alt="" />
               </div>
-              <p>chat</p>
+              <p>{t("RoadMap.Chat")}</p>
             </div>
             <div
               className={
@@ -102,7 +104,7 @@ function RoadMapSection() {
               <div className={`${style.circle} ${style.itemBackground}`}>
                 <img src={GoogleCalendar} alt="" />
               </div>
-              <p>calendar</p>
+              <p>{t("RoadMap.Calendar")}</p>
             </div>
 
             <div

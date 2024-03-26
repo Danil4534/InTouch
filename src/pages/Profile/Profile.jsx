@@ -12,7 +12,7 @@ function Profile() {
     <>
       <div className={style.profileMain}>
         <div className={style.profileTitle}>
-          <h1>Hello user</h1>
+          <h1>Hello {currentUser.username}</h1>
           <h1>Profile</h1>
         </div>
         <div className={style.profileLine}></div>
@@ -35,7 +35,7 @@ function Profile() {
             <div className={style.profileInfo}>
               <div>
                 <h4>Personal Id</h4>
-                <p>@test</p>
+                <p>@{currentUser.id}</p>
               </div>
               <div>
                 <h4>Email</h4>

@@ -10,35 +10,57 @@ import * as Yup from "yup";
 import axios from "axios";
 import Notification from "../../Notification/Notification";
 function RegistrationForm() {
-  const { registerFormActive, setSwapRegisterLogin } = useStore();
+  const {
+    registerFormActive,
+    setSwapRegisterLogin,
+    setNotificationState,
+    notificationState,
+  } = useStore();
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
       lastName: "",
-      nickName: "",
-      newEmail: "",
-      newPassword: "",
+      username: "",
+      email: "",
+      password: "",
     },
     validationSchema: Yup.object({
-      newEmail: Yup.string().email("Invalid email").required("Input email"),
-      newPassword: Yup.string()
-        .required("Input password")
-        .min(4, "Min 4 symbols"),
-      nickName: Yup.string().required("Input nickname"),
+      email: Yup.string().email("Invalid email").required("Input email"),
+      password: Yup.string().required("Input password").min(4, "Min 4 symbols"),
+      username: Yup.string().required("Input nickname"),
     }),
     onSubmit: async (values) => {
       try {
         const response = await axios.post(
           "http://127.0.0.1:8000/auth/register/",
           {
-            email: values.email,
             username: values.username,
-            password: values.newPassword,
+            email: values.email,
+            password: values.password,
           }
         );
-        window.location.reload();
+        console.log(response.status);
+        if (response.status === 201) {
+          setNotificationState({
+            status: "success",
+            message: "Success",
+            description: "Check your email",
+          });
+        }
+        setTimeout(() => {
+          window.location.reload();
+        }, 4000);
       } catch (e) {
-        console.log(e);
+        if (e.response.status === 400) {
+          setNotificationState({
+            status: "error",
+            message: "Warning",
+            description: "This email is exits",
+          });
+        } else {
+          console.log(e);
+        }
       }
     },
   });
@@ -60,16 +82,16 @@ function RegistrationForm() {
           <div className={style.emailSection}>
             <input
               type="text"
-              name="nickName"
+              name="username"
               id="activeinputNickname"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={formik.values.nickName}
+              value={formik.values.username}
             />
             <label
               className={
-                (formik.touched.nickName && formik.errors.nickName) ||
-                formik.values.nickName != ""
+                (formik.touched.username && formik.errors.username) ||
+                formik.values.username != ""
                   ? `${style.inputerrorlabel}`
                   : null
               }
@@ -77,7 +99,7 @@ function RegistrationForm() {
             >
               Nickname
             </label>
-            {formik.touched.nickName && formik.errors.nickName ? (
+            {formik.touched.username && formik.errors.username ? (
               <p
                 style={{
                   color: "red",
@@ -85,7 +107,7 @@ function RegistrationForm() {
                   position: "relative",
                 }}
               >
-                {formik.errors.nickName}
+                {formik.errors.username}
               </p>
             ) : null}
           </div>
@@ -94,16 +116,16 @@ function RegistrationForm() {
             <img src={EmailIcon} alt="" />
             <input
               type="text"
-              name="newEmail"
+              name="email"
               id="activeInputEmail"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={formik.values.newEmail}
+              value={formik.values.email}
             />
             <label
               className={
-                (formik.touched.newEmail && formik.errors.newEmail) ||
-                formik.values.newEmail != ""
+                (formik.touched.email && formik.errors.email) ||
+                formik.values.email != ""
                   ? `${style.inputerrorlabel}`
                   : null
               }
@@ -111,7 +133,7 @@ function RegistrationForm() {
             >
               Email
             </label>
-            {formik.touched.newEmail && formik.errors.newEmail ? (
+            {formik.touched.email && formik.errors.email ? (
               <p
                 style={{
                   color: "red",
@@ -119,7 +141,7 @@ function RegistrationForm() {
                   position: "relative",
                 }}
               >
-                {formik.errors.newEmail}
+                {formik.errors.email}
               </p>
             ) : null}
           </div>
@@ -127,16 +149,16 @@ function RegistrationForm() {
             <img src={LockIcon} alt="" />
             <input
               type="password"
-              name="newPassword"
+              name="password"
               id="activeInputPassword"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              value={formik.values.newPassword}
+              value={formik.values.password}
             />
             <label
               className={
-                (formik.touched.newPassword && formik.errors.newPassword) ||
-                formik.values.newPassword != ""
+                (formik.touched.password && formik.errors.password) ||
+                formik.values.password != ""
                   ? `${style.inputerrorlabel}`
                   : null
               }
@@ -144,7 +166,7 @@ function RegistrationForm() {
             >
               Password
             </label>
-            {formik.touched.newPassword && formik.errors.newPassword ? (
+            {formik.touched.password && formik.errors.password ? (
               <p
                 style={{
                   color: "red",
@@ -152,13 +174,19 @@ function RegistrationForm() {
                   position: "relative",
                 }}
               >
-                {formik.errors.newPassword}
+                {formik.errors.password}
               </p>
             ) : null}
           </div>
           <div className={style.formBtn}>
-            {/* <Notification /> */}
-            <button type="Submit">Register</button>
+            <Notification />
+            <button
+              type="Submit"
+              id="btnAuthRegister"
+              style={{ visibility: "hidden" }}
+            >
+              Register
+            </button>
           </div>
 
           <div className={style.googleBtn}>

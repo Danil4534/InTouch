@@ -43,6 +43,8 @@
         .profileIcon {
           width: 115px;
           height: 115px;
+          border: 2px solid green;
+          border-radius: 50%;
         }
         .profileEditImg {
           position: absolute;
@@ -58,6 +60,10 @@
         }
       }
       .profileNick {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin-top: 28px;
         p {
           margin-top: 10px;
@@ -93,7 +99,7 @@
       }
       .profileInfo {
         width: 100%;
-
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -102,7 +108,7 @@
       }
       .profileInfo div {
         width: 100%;
-        height: 60px;
+
         background-color: var(--color4);
         border-radius: 10px;
         border: 1px solid var(--color23);
@@ -114,6 +120,7 @@
           margin-bottom: 5px;
         }
         p {
+          font-size: 12px;
           width: 100%;
         }
       }

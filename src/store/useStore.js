@@ -37,14 +37,6 @@ import { create } from "zustand";
  * @returns {StoreState} The state and actions for managing user authentication and active courses.
  */
 
-const usersState = [
-  {
-    id: 1,
-    nick: "Danil Tsapok",
-    email: "danil123",
-    password: "123",
-  },
-];
 const activeCourses = [
   {
     id: 1,
@@ -109,13 +101,14 @@ const activeCourses = [
 ];
 
 const useStore = create((set) => ({
+  notificationState: {},
+  setNotificationState: (state) => set({ notificationState: state }),
   currentUser: "",
   setCurrentUser: (user) => set({ currentUser: user }),
   activeBtnLogin: true,
   setActiveBtnLogin: () => set({ activeBtnLogin: false }),
   isChecked: localStorage.getItem("selectedTheme") === "light",
   switchCheck: () => set((state) => ({ isChecked: !state.isChecked })),
-  users: usersState,
   activeCourses: activeCourses,
   authModalState: false,
   loginFormActive: true,
